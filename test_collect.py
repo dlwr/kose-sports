@@ -27,6 +27,13 @@ GNEWS_SANNICHI = """<rss><channel>
 <pubDate>Wed, 11 Nov 2026 07:00:00 GMT</pubDate><source url="https://www.sannichi.co.jp">sannichi.co.jp</source></item>
 </channel></rss>"""
 
+REDIRECT_PAGE = '<c-wiz><div data-n-a-sg="SIG" data-n-a-ts="1794406190"></div></c-wiz>'
+REDIRECT_ANSWER = (
+    ")]}'\n\n"
+    '[["wrb.fr","Fbv4je","[\\"garturlres\\",\\"https://www.sannichi.co.jp/article/1?g\\\\u003dco\\",1]",null,null,null,"generic"]]'
+)
+ARTICLE = '<html><head><meta property="og:image" content="https://cdn.sannichi.co.jp/img/a.jpg"></head></html>'
+
 HOCHI = """<ul><li class="article-list__item"> <a href="/articles/20261109-OHT1T51310.html" class="article-list__unit">
 <img src="data:image/gif;base64,R0" data-src="https://hochi.news/images/a.jpg" alt="x">
 <h3 class="article-list__title">板野友美 ルビーにときめき</h3> <time class="article-list__date">2026年11月09日 20:03</time> </a> </li>
@@ -132,6 +139,31 @@ class ParseNewsTest(unittest.TestCase):
         self.assertEqual(collect.parse_note(NOTE)[0]["image"], "https://assets.st-note.com/t.jpg")
 
 
+class GnewsRedirectTest(unittest.TestCase):
+    def test_request_carries_article_id_and_signature(self):
+        self.assertIn("SIG", collect.gnews_request(REDIRECT_PAGE, "S1"))
+
+    def test_request_is_none_without_signature(self):
+        self.assertIsNone(collect.gnews_request("<html></html>", "S1"))
+
+    def test_answer_gives_article_url(self):
+        self.assertEqual(collect.parse_gnews_answer(REDIRECT_ANSWER), "https://www.sannichi.co.jp/article/1?g=co")
+
+    def test_og_image(self):
+        self.assertEqual(collect.parse_og_image(ARTICLE), "https://cdn.sannichi.co.jp/img/a.jpg")
+
+    def test_og_image_with_content_first(self):
+        html = '<meta content="https://x/a.jpg" property="og:image">'
+        self.assertEqual(collect.parse_og_image(html), "https://x/a.jpg")
+
+    def test_site_default_og_image_is_ignored(self):
+        html = '<meta property="og:image" content="https://www.ventforet.jp/asset/img/og-image.png">'
+        self.assertIsNone(collect.parse_og_image(html))
+
+    def test_page_without_og_image(self):
+        self.assertIsNone(collect.parse_og_image("<html></html>"))
+
+
 class ParseBoardsTest(unittest.TestCase):
     def test_subject_finds_kofu_thread(self):
         self.assertEqual(collect.parse_subject(SUBJECT)["kofu5ch"], ["1793848769"])
@@ -216,8 +248,11 @@ class ParseClubTest(unittest.TestCase):
 
 
 class CollectTest(unittest.TestCase):
-    def fetch(self, url, encoding="utf-8"):
+    def fetch(self, url, encoding="utf-8", data=None):
         pages = {
+            "rss/articles": REDIRECT_PAGE,
+            "batchexecute": REDIRECT_ANSWER,
+            "sannichi.co.jp/article": ARTICLE,
             "sannichi.co.jp": GNEWS_SANNICHI,
             "news.google.com": GNEWS,
             "ventforet.jp": globals()["OFFICIAL"],
@@ -254,6 +289,31 @@ class CollectTest(unittest.TestCase):
     def test_sannichi_items_about_other_topics_are_dropped(self):
         titles = [n["title"] for n in self.run_collect()["news"]]
         self.assertNotIn("今朝の気温（11日午前6時）", titles)
+
+    def sannichi_item(self):
+        return next(n for n in self.run_collect()["news"] if n["source"] == "山梨日日新聞")
+
+    def test_google_link_is_replaced_by_article_url(self):
+        self.assertEqual(self.sannichi_item()["url"], "https://www.sannichi.co.jp/article/1?g=co")
+
+    def test_google_item_gets_article_image(self):
+        self.assertEqual(self.sannichi_item()["image"], "https://cdn.sannichi.co.jp/img/a.jpg")
+
+    def test_google_link_is_kept_when_it_cannot_be_resolved(self):
+        self.broken = {"batchexecute"}
+        self.assertEqual(self.sannichi_item()["url"], "https://news.google.com/rss/articles/S1?oc=5")
+
+    def test_resolved_url_is_kept_when_article_cannot_be_read(self):
+        self.broken = {"sannichi.co.jp/article"}
+        self.assertEqual(self.sannichi_item()["url"], "https://www.sannichi.co.jp/article/1?g=co")
+
+    def test_unresolved_link_is_not_a_source_failure(self):
+        self.broken = {"batchexecute"}
+        self.assertEqual(self.run_collect()["failures"], [])
+
+    def test_same_article_from_two_sources_appears_once(self):
+        items = [{"url": "https://a", "image": None, "n": 1}, {"url": "https://a", "image": "https://i", "n": 2}]
+        self.assertEqual([i["n"] for i in collect.unique(items)], [2])
 
     def test_news_is_newest_first(self):
         published = [n["published"] for n in self.run_collect()["news"]]

@@ -1,3 +1,4 @@
+import json
 import re
 import sys
 import time
@@ -6,7 +7,7 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from html import unescape
-from urllib.parse import quote
+from urllib.parse import quote, urlencode
 
 JST = timezone(timedelta(hours=9))
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
@@ -16,6 +17,9 @@ CHO_MAX_PAGES = 60
 KOFU = re.compile("甲府|ヴァンフォーレ|ＶＦ")
 VF = re.compile("ＶＦ|VF|ヴァンフォーレ")
 CLUB = "ヴァンフォーレ甲府"
+GNEWS_ARTICLE = "https://news.google.com/rss/articles/"
+GNEWS_RESOLVE_URL = "https://news.google.com/_/DotsSplashUi/data/batchexecute"
+GENERIC_IMAGE = re.compile(r"og[-_]?image|ogp|default|logo|no[-_]?image", re.I)
 SOURCE_NAMES = {"sannichi.co.jp": "山梨日日新聞"}
 
 GNEWS_URL = "https://news.google.com/rss/search?q=" + quote(CLUB) + "+when:2d&hl=ja&gl=JP&ceid=JP:ja"
@@ -40,8 +44,8 @@ NS = {
 }
 
 
-def fetch(url, encoding="utf-8", urlopen=urllib.request.urlopen, sleep=time.sleep):
-    req = urllib.request.Request(url, headers={"User-Agent": UA})
+def fetch(url, encoding="utf-8", data=None, urlopen=urllib.request.urlopen, sleep=time.sleep):
+    req = urllib.request.Request(url, data=data and data.encode(), headers={"User-Agent": UA})
     for left in reversed(range(ATTEMPTS)):
         try:
             with urlopen(req, timeout=30) as res:
@@ -73,6 +77,37 @@ def parse_gnews(xml):
         published = parsedate_to_datetime(e.findtext("pubDate")).astimezone(JST).isoformat()
         items.append(item(source, title, e.findtext("link"), published))
     return items
+
+
+def gnews_request(page, article_id):
+    sig = re.search(r'data-n-a-sg="([^"]+)"', page)
+    ts = re.search(r'data-n-a-ts="(\d+)"', page)
+    if not (sig and ts):
+        return None
+    locale = ["X", "X", ["X", "X"], None, None, 1, 1, "US:en", None, 1, None, None, None, None, None, 0, 1]
+    inner = ["garturlreq", [locale, "X", "X", 1, [1, 1, 1], 1, 1, None, 0, 0, None, 0], article_id, int(ts.group(1)), sig.group(1)]
+    return urlencode({"f.req": json.dumps([[["Fbv4je", json.dumps(inner), None, "generic"]]])})
+
+
+def parse_gnews_answer(text):
+    rows = json.loads(text[text.index("[[") :])
+    return json.loads(rows[0][2])[1]
+
+
+def parse_og_image(html):
+    tag = re.search(r'<meta[^>]*property=["\']og:image["\'][^>]*>', html)
+    url = tag and re.search(r'content=["\']([^"\']+)', tag.group(0))
+    if not url or GENERIC_IMAGE.search(url.group(1)):
+        return None
+    return unescape(url.group(1))
+
+
+def unique(items):
+    best = {}
+    for i in items:
+        if i["url"] not in best or (i["image"] and not best[i["url"]]["image"]):
+            best[i["url"]] = i
+    return list(best.values())
 
 
 def parse_official(html):
@@ -247,6 +282,20 @@ def collect(now, fetch=fetch, sleep=time.sleep):
         "山梨日日新聞", lambda: [n for n in parse_gnews(fetch(GNEWS_SANNICHI_URL)) if VF.search(n["title"])], []
     )
     news += attempt("スポーツ報知", lambda: parse_hochi(fetch(HOCHI_URL)), [])
+    def enrich(n):
+        try:
+            if n["url"].startswith(GNEWS_ARTICLE):
+                article_id = n["url"].removeprefix(GNEWS_ARTICLE).split("?")[0]
+                body = gnews_request(fetch(GNEWS_ARTICLE + article_id), article_id)
+                n["url"] = parse_gnews_answer(fetch(GNEWS_RESOLVE_URL, data=body))
+                sleep(1)
+            if not n["image"]:
+                n["image"] = parse_og_image(fetch(n["url"]))
+        except Exception as e:
+            print(f"no photo for {n['title'][:20]}: {e!r}"[:200], file=sys.stderr)
+        return n
+
+    news = unique(enrich(n) for n in recent(news))
     videos = attempt("YouTube", lambda: parse_youtube(fetch(YOUTUBE_URL)), [])
     notes = attempt("note", lambda: parse_note(fetch(NOTE_URL)), [])
 
