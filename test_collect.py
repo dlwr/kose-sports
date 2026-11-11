@@ -224,7 +224,7 @@ class CollectTest(unittest.TestCase):
         pages = {
             "news.google.com": GNEWS,
             "ventforet.jp": OFFICIAL,
-            "sannichi": SANNICHI,
+            "sannichi": globals()["SANNICHI"],
             "hochi": HOCHI,
             "youtube": YOUTUBE,
             "note.com": NOTE,
@@ -275,6 +275,12 @@ class CollectTest(unittest.TestCase):
     def test_broken_source_does_not_stop_others(self):
         self.broken = {"sannichi"}
         self.assertTrue(self.run_collect()["boards"]["cho"])
+
+    def test_list_page_without_items_is_reported(self):
+        global SANNICHI
+        original, SANNICHI = SANNICHI, "<html>blocked</html>"
+        self.addCleanup(lambda: globals().update(SANNICHI=original))
+        self.assertEqual(self.run_collect()["failures"], ["山梨日日新聞"])
 
     def test_broken_subject_reports_5ch(self):
         self.broken = {"subject.txt"}

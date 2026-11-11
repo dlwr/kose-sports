@@ -250,14 +250,17 @@ def collect(now, fetch=fetch, sleep=time.sleep):
             print(f"skip {label}: {e!r}", file=sys.stderr)
             return default
 
-    news = []
-    for label, url, parser in [
-        ("Google ニュース", GNEWS_URL, parse_gnews),
-        ("クラブ公式", OFFICIAL_URL, parse_official),
-        ("山梨日日新聞", SANNICHI_URL, parse_sannichi),
-        ("スポーツ報知", HOCHI_URL, parse_hochi),
-    ]:
-        news += attempt(label, lambda: parser(fetch(url)), [])
+    def listing(url, parser):
+        html = fetch(url)
+        items = parser(html)
+        if not items:
+            raise ValueError(f"no items in {len(html)} chars: {html[:200]!r}")
+        return items
+
+    news = attempt("Google ニュース", lambda: parse_gnews(fetch(GNEWS_URL)), [])
+    news += attempt("クラブ公式", lambda: listing(OFFICIAL_URL, parse_official), [])
+    news += attempt("山梨日日新聞", lambda: listing(SANNICHI_URL, parse_sannichi), [])
+    news += attempt("スポーツ報知", lambda: parse_hochi(fetch(HOCHI_URL)), [])
     videos = attempt("YouTube", lambda: parse_youtube(fetch(YOUTUBE_URL)), [])
     notes = attempt("note", lambda: parse_note(fetch(NOTE_URL)), [])
 

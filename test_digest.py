@@ -83,6 +83,11 @@ class ValidateTest(unittest.TestCase):
         out = digest.validate(raw(top=topic(["N1", "N1"])), self.index)
         self.assertEqual(len(out["top"]["links"]), 1)
 
+    def test_links_are_capped(self):
+        index = {f"N{i}": {"title": str(i), "url": f"https://s/{i}", "source": "s", "image": None} for i in range(9)}
+        out = digest.validate(raw(top=topic(list(index))), index)
+        self.assertEqual(len(out["top"]["links"]), 5)
+
     def test_rumor_keeps_confidence(self):
         out = digest.validate(raw(rumors=[topic(["R1"], origin="らスレ", confidence=1)]), self.index)
         self.assertEqual(out["rumors"][0]["confidence"], 1)

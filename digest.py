@@ -2,6 +2,7 @@ import json
 import sys
 
 MODEL = "claude-sonnet-5-5"
+MAX_LINKS = 5
 BOARDS = {"kofu5ch": ("K", "5ch 甲府スレ"), "ra": ("R", "らスレ"), "cho": ("C", "超掲示板")}
 
 SYSTEM = """あなたはヴァンフォーレ甲府専門の架空のスポーツ紙「小瀬スポーツ」の編集長です。渡された素材だけを使って、今日の紙面を作ります。
@@ -16,7 +17,7 @@ SYSTEM = """あなたはヴァンフォーレ甲府専門の架空のスポー�
 5 = クラブ公式発表 / 4 = 地元紙・全国紙が報道 / 3 = 複数の媒体や記者が示唆 / 2 = 掲示板の複数の書き込みが言及 / 1 = 単発の書き込み
 
 決まり:
-- 各項目の sources には、根拠にした素材の ID（N1、K3 など）を必ず入れる。素材にないことは書かない。推測で補わない。
+- 各項目の sources には、根拠にした素材の ID（N1、K3 など）を必ず入れる。素材にないことは書かない。推測で補わない。sources は根拠として重要な順に5件まで。
 - 文体はスポーツ紙の見出し調。甲府に身びいきしてよいが、他クラブや個人を貶さない。
 - 掲示板の書き込みは原文を引用せず、要約する。
 - 実名の個人についての私生活（交際・家族）、病気、犯罪の疑い、単なる罵倒は載せない。クラブが公式に発表したけがや慶事は載せてよい。
@@ -75,7 +76,7 @@ def build_prompt(collected, date):
 
 def validate(raw, index):
     def clean(topic):
-        ids = [i for i in dict.fromkeys(topic["sources"]) if i in index]
+        ids = [i for i in dict.fromkeys(topic["sources"]) if i in index][:MAX_LINKS]
         if not ids:
             return None
         sources = [index[i] for i in ids]
