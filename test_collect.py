@@ -1,0 +1,285 @@
+import unittest
+from datetime import datetime
+
+import collect
+from collect import JST
+
+NOW = datetime(2026, 11, 12, 6, 0, tzinfo=JST)
+
+GNEWS = """<rss><channel><title>x</title>
+<item><title>甲府がDF獲得へ - スポーツ報知</title><link>https://news.google.com/rss/articles/AAA?oc=5</link>
+<pubDate>Tue, 10 Nov 2026 05:04:50 GMT</pubDate><source url="https://hochi.news">スポーツ報知</source></item>
+</channel></rss>"""
+
+OFFICIAL = """<ul><li> <a class="newsList__item" href="/news/other/525715"> <div class="newsList__itemText">
+<p class="top-news__day">2026.11.10 （火）</p> <p class="top-news__category -other"><span>その他</span></p>
+<p class="top-news__information__detail">秋田戦のお知らせ</p> </div>
+<div class="newsList__itemImage"> <img alt="PHOTO" src="https://cdn.www.ventforet.jp/images/photo_notfound.gif" /> </div> </a> </li>
+<li> <a class="newsList__item" href="/news/team/525707"> <div class="newsList__itemText">
+<p class="top-news__day">2026.11.9 （月）</p>
+<p class="top-news__information__detail">新加入選手のお知らせ</p> </div>
+<div class="newsList__itemImage"> <img alt="PHOTO" src="https://cdn.www.ventforet.jp/images/p.jpg" /> </div> </a> </li></ul>"""
+
+SANNICHI = """<dl> <dt> <a href="/article/2026/11/11/80733244">角市がＶＦ甲府に作戦ボード寄贈</a>
+<span class="date">(11/11 19:05)</span> <span class="paymark"></span> </dt>
+<dd> <img src=https://cdn.sannichi.co.jp/img/a.jpg class="chk_exists" > </dd>
+<dt> <a href="/article/2026/11/11/80733173">ＶＦ甲府 外国人２選手が練習参加</a> <span class="date">(11/11 16:41)</span> </dt> <dd> </dd></dl>"""
+
+HOCHI = """<ul><li class="article-list__item"> <a href="/articles/20261109-OHT1T51310.html" class="article-list__unit">
+<img src="data:image/gif;base64,R0" data-src="https://hochi.news/images/a.jpg" alt="x">
+<h3 class="article-list__title">板野友美 ルビーにときめき</h3> <time class="article-list__date">2026年11月09日 20:03</time> </a> </li>
+<li class="article-list__item"> <a href="/articles/20261110-OHT1T51001.html" class="article-list__unit">
+<img src="data:image/gif;base64,R0" data-src="https://hochi.news/images/b.jpg" alt="x">
+<h3 class="article-list__title">【甲府】渋谷監督「前を向く」</h3> <time class="article-list__date">2026年11月10日 08:30</time> </a> </li></ul>"""
+
+YOUTUBE = """<feed xmlns:yt="http://www.youtube.com/xml/schemas/2015" xmlns="http://www.w3.org/2005/Atom">
+<entry><yt:videoId>abc123</yt:videoId><title>ハイライト</title><published>2026-11-10T09:00:00+00:00</published></entry></feed>"""
+
+NOTE = """<rss xmlns:note="https://note.com" xmlns:media="http://search.yahoo.com/mrss/"><channel>
+<item><title>仙台戦の感想</title><media:thumbnail>https://assets.st-note.com/t.jpg</media:thumbnail>
+<note:creatorName>甲府サポ</note:creatorName><pubDate>Wed, 11 Nov 2026 19:42:10 +0900</pubDate>
+<link>https://note.com/a/n/n1</link></item></channel></rss>"""
+
+SUBJECT = """1794368995.dat<>移籍・レンタル・戦力外「ら」スレ Part17978 (461)
+1793848769.dat<>ヴァンフォーレ甲府 ☆ 遂にJ1復帰!!1076 (246)
+1794142270.dat<>移籍・レンタル・戦力外「ら」スレ Part17977 (1002)
+1793440097.dat<>移籍・レンタル・戦力外「ら」スレ Part17969 (73)
+1787762532.dat<>ジェフユナイテッド千葉レディース (215)
+"""
+
+
+def post_5ch(no, date, body):
+    return (
+        f'<div id="{no}" data-date="NG" data-userid="ID:x" data-id="{no}" class="clear post"><div class="post-header">'
+        f'<span class="postid">{no}</span><input type="hidden" name="date" value="{date}">'
+        f'<span class="date">{date}</span><span class="uid">ID:x</span></div>'
+        f'<div class="post-content"> {body} </div></div>'
+    )
+
+
+THREAD = post_5ch(1, "2026/11/10(火) 11:14:29.72", "監督交代の噂 <br> 本当か？") + post_5ch(
+    2, "2026/11/11(水) 09:00:00.00", '<a href="../1">&gt;&gt;1</a> <br> ないだろ'
+)
+
+CHO = """<a name="906571" id="906571"></a><article class="post"> <header class="post__header">
+<span class="post__user-name" style="color:#ffff00;">青赤</span>
+<span class="post__date">2026/11/11 22:24</span> <span class="post__model">iOS18.7</span>
+<div class="post__post-no">No.906571</div> </header> <div class="post__body"> <div> </div>
+<a href="./?anc=906569#anc" class="res-anchor">&gt;&gt;906569</a><div class="anchor-frame"></div>引退したんだ！ </div>
+<footer class="post__footer"> <a href="write.php?replay=906571">返信</a> </footer> </article>"""
+
+SCHEDULE = """<p>明治安田Ｊ２リーグの成績</p><p>3勝3分10敗（20位）</p><h2>日程・結果</h2>
+<div>2026/11/8 (日)</div><div>第16節</div><div>15:00</div><div>KO</div><div>ベガルタ仙台</div><div>仙台</div>
+<div>5</div><div>試合終了</div><div>1</div><div>ヴァンフォーレ甲府</div><div>甲府</div><div>ユアスタ</div>
+<div>2026/11/14 (土)</div><div>第17節</div><div>藤枝ＭＹＦＣ</div><div>藤枝</div><div>14:00</div>
+<div>ヴァンフォーレ甲府</div><div>甲府</div><div>藤枝サ</div><div>藤枝総合運動公園サッカー場</div>
+<div>2026/11/21 (土)</div><div>第18節</div><div>ヴァンフォーレ甲府</div><div>甲府</div><div>14:00</div>
+<div>ヴァンラーレ八戸</div><div>八戸</div><div>ＪＩＴス</div><div>ＪＩＴ　リサイクルインク　スタジアム</div>"""
+
+PLAYERS = """<a class="o-table__player-name-link" href="/player/1658991/">後藤 陽翔</a>
+<a class="o-table__player-name-link" href="/player/1632238/">東 ジョン</a>"""
+
+
+class ParseNewsTest(unittest.TestCase):
+    def test_gnews_strips_source_suffix_from_title(self):
+        self.assertEqual(collect.parse_gnews(GNEWS)[0]["title"], "甲府がDF獲得へ")
+
+    def test_gnews_source(self):
+        self.assertEqual(collect.parse_gnews(GNEWS)[0]["source"], "スポーツ報知")
+
+    def test_gnews_published_in_jst(self):
+        self.assertEqual(collect.parse_gnews(GNEWS)[0]["published"], "2026-11-10T14:04:50+09:00")
+
+    def test_official_url_is_absolute(self):
+        self.assertEqual(collect.parse_official(OFFICIAL)[0]["url"], "https://www.ventforet.jp/news/other/525715")
+
+    def test_official_title(self):
+        self.assertEqual(collect.parse_official(OFFICIAL)[0]["title"], "秋田戦のお知らせ")
+
+    def test_official_date_only_counts_as_end_of_day(self):
+        self.assertEqual(collect.parse_official(OFFICIAL)[0]["published"], "2026-11-10T23:59:00+09:00")
+
+    def test_official_placeholder_image_is_dropped(self):
+        self.assertIsNone(collect.parse_official(OFFICIAL)[0]["image"])
+
+    def test_official_image(self):
+        self.assertEqual(collect.parse_official(OFFICIAL)[1]["image"], "https://cdn.www.ventforet.jp/images/p.jpg")
+
+    def test_sannichi_published_takes_year_from_url(self):
+        self.assertEqual(collect.parse_sannichi(SANNICHI)[0]["published"], "2026-11-11T19:05:00+09:00")
+
+    def test_sannichi_image(self):
+        self.assertEqual(collect.parse_sannichi(SANNICHI)[0]["image"], "https://cdn.sannichi.co.jp/img/a.jpg")
+
+    def test_sannichi_item_without_image(self):
+        self.assertIsNone(collect.parse_sannichi(SANNICHI)[1]["image"])
+
+    def test_hochi_keeps_only_kofu_titles(self):
+        self.assertEqual([i["title"] for i in collect.parse_hochi(HOCHI)], ["【甲府】渋谷監督「前を向く」"])
+
+    def test_hochi_image_comes_from_lazy_attribute(self):
+        self.assertEqual(collect.parse_hochi(HOCHI)[0]["image"], "https://hochi.news/images/b.jpg")
+
+    def test_hochi_published(self):
+        self.assertEqual(collect.parse_hochi(HOCHI)[0]["published"], "2026-11-10T08:30:00+09:00")
+
+    def test_youtube_url(self):
+        self.assertEqual(collect.parse_youtube(YOUTUBE)[0]["url"], "https://www.youtube.com/watch?v=abc123")
+
+    def test_youtube_image(self):
+        self.assertEqual(collect.parse_youtube(YOUTUBE)[0]["image"], "https://i.ytimg.com/vi/abc123/mqdefault.jpg")
+
+    def test_note_author(self):
+        self.assertEqual(collect.parse_note(NOTE)[0]["source"], "甲府サポ")
+
+    def test_note_image(self):
+        self.assertEqual(collect.parse_note(NOTE)[0]["image"], "https://assets.st-note.com/t.jpg")
+
+
+class ParseBoardsTest(unittest.TestCase):
+    def test_subject_finds_kofu_thread(self):
+        self.assertEqual(collect.parse_subject(SUBJECT)["kofu5ch"], ["1793848769"])
+
+    def test_subject_takes_two_newest_ra_threads(self):
+        self.assertEqual(collect.parse_subject(SUBJECT)["ra"], ["1794368995", "1794142270"])
+
+    def test_5ch_text_joins_lines(self):
+        self.assertEqual(collect.parse_5ch(THREAD, "1793848769")[0]["text"], "監督交代の噂\n本当か？")
+
+    def test_5ch_anchor_stays_readable(self):
+        self.assertEqual(collect.parse_5ch(THREAD, "1793848769")[1]["text"], ">>1\nないだろ")
+
+    def test_5ch_published(self):
+        self.assertEqual(collect.parse_5ch(THREAD, "1793848769")[0]["published"], "2026-11-10T11:14:29+09:00")
+
+    def test_5ch_url_points_at_post(self):
+        self.assertEqual(
+            collect.parse_5ch(THREAD, "1793848769")[1]["url"],
+            "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/2",
+        )
+
+    def test_cho_text(self):
+        self.assertEqual(collect.parse_cho(CHO)[0]["text"], ">>906569 引退したんだ！")
+
+    def test_cho_published(self):
+        self.assertEqual(collect.parse_cho(CHO)[0]["published"], "2026-11-11T22:24:00+09:00")
+
+    def test_cho_url(self):
+        self.assertEqual(collect.parse_cho(CHO)[0]["url"], "https://bm.best-hit.tv/ventforet/?anc=906571#anc")
+
+
+class SelectRaTest(unittest.TestCase):
+    POSTS = [
+        {"no": 1, "text": "浦和がFW獲得らしい"},
+        {"no": 2, "text": "それより鹿島"},
+        {"no": 3, "text": ">>2\n甲府のボランチ狙ってるって"},
+        {"no": 4, "text": "後藤陽翔に J1 から話"},
+        {"no": 5, "text": "関係ない話"},
+    ]
+
+    def test_keeps_keyword_hits_and_their_anchor_targets(self):
+        picked = collect.select_ra(self.POSTS, ["甲府", "後藤陽翔"])
+        self.assertEqual([p["no"] for p in picked], [2, 3, 4])
+
+
+class ParseClubTest(unittest.TestCase):
+    def test_record(self):
+        self.assertEqual(collect.parse_schedule(SCHEDULE, NOW)["record"], "3勝3分10敗")
+
+    def test_rank(self):
+        self.assertEqual(collect.parse_schedule(SCHEDULE, NOW)["rank"], 20)
+
+    def test_league(self):
+        self.assertEqual(collect.parse_schedule(SCHEDULE, NOW)["league"], "明治安田Ｊ２リーグ")
+
+    def test_next_match_is_first_fixture_from_today(self):
+        self.assertEqual(collect.parse_schedule(SCHEDULE, NOW)["next"]["date"], "2026-11-14")
+
+    def test_next_match_opponent_when_away(self):
+        self.assertEqual(collect.parse_schedule(SCHEDULE, NOW)["next"]["opponent"], "藤枝ＭＹＦＣ")
+
+    def test_next_match_is_away(self):
+        self.assertFalse(collect.parse_schedule(SCHEDULE, NOW)["next"]["home"])
+
+    def test_next_match_kickoff(self):
+        self.assertEqual(collect.parse_schedule(SCHEDULE, NOW)["next"]["time"], "14:00")
+
+    def test_next_match_venue(self):
+        self.assertEqual(collect.parse_schedule(SCHEDULE, NOW)["next"]["venue"], "藤枝総合運動公園サッカー場")
+
+    def test_next_match_opponent_when_home(self):
+        later = datetime(2026, 11, 15, 6, 0, tzinfo=JST)
+        self.assertEqual(collect.parse_schedule(SCHEDULE, later)["next"]["opponent"], "ヴァンラーレ八戸")
+
+    def test_no_fixture_left(self):
+        later = datetime(2026, 12, 1, 6, 0, tzinfo=JST)
+        self.assertIsNone(collect.parse_schedule(SCHEDULE, later)["next"])
+
+    def test_players_drop_space(self):
+        self.assertEqual(collect.parse_players(PLAYERS), ["後藤陽翔", "東ジョン"])
+
+
+class CollectTest(unittest.TestCase):
+    def fetch(self, url, encoding="utf-8"):
+        pages = {
+            "news.google.com": GNEWS,
+            "ventforet.jp": OFFICIAL,
+            "sannichi": SANNICHI,
+            "hochi": HOCHI,
+            "youtube": YOUTUBE,
+            "note.com": NOTE,
+            "subject.txt": SUBJECT,
+            "read.cgi": THREAD,
+            "best-hit": CHO,
+            "/day/": SCHEDULE,
+            "/player/": PLAYERS,
+        }
+        for key, body in pages.items():
+            if key in url:
+                if key in self.broken:
+                    raise OSError("boom")
+                return body
+        raise AssertionError(url)
+
+    def setUp(self):
+        self.broken = set()
+
+    def run_collect(self):
+        return collect.collect(NOW, self.fetch, sleep=lambda s: None)
+
+    def test_news_older_than_window_is_dropped(self):
+        titles = [n["title"] for n in self.run_collect()["news"]]
+        self.assertNotIn("甲府がDF獲得へ", titles)
+
+    def test_news_inside_window_is_kept(self):
+        titles = [n["title"] for n in self.run_collect()["news"]]
+        self.assertIn("角市がＶＦ甲府に作戦ボード寄贈", titles)
+
+    def test_news_is_newest_first(self):
+        published = [n["published"] for n in self.run_collect()["news"]]
+        self.assertEqual(published, sorted(published, reverse=True))
+
+    def test_board_posts_inside_window(self):
+        self.assertEqual([p["no"] for p in self.run_collect()["boards"]["kofu5ch"]], [2])
+
+    def test_cho_posts(self):
+        self.assertEqual([p["no"] for p in self.run_collect()["boards"]["cho"]], [906571])
+
+    def test_club(self):
+        self.assertEqual(self.run_collect()["club"]["rank"], 20)
+
+    def test_broken_source_is_reported(self):
+        self.broken = {"sannichi"}
+        self.assertEqual(self.run_collect()["failures"], ["山梨日日新聞"])
+
+    def test_broken_source_does_not_stop_others(self):
+        self.broken = {"sannichi"}
+        self.assertTrue(self.run_collect()["boards"]["cho"])
+
+    def test_broken_subject_reports_5ch(self):
+        self.broken = {"subject.txt"}
+        self.assertEqual(self.run_collect()["failures"], ["5ch"])
+
+
+if __name__ == "__main__":
+    unittest.main()
