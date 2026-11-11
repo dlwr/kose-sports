@@ -119,13 +119,16 @@ class RenderTest(unittest.TestCase):
     def test_links_only_issue_lists_news(self):
         item = {"source": "山梨日日新聞", "title": "練習参加", "url": "https://s/1", "published": "2026-11-11T16:41:00+09:00", "image": None}
         page = html(news=[item], digest={"links_only": True, "top": None})
-        self.assertIn('<a href="https://s/1">練習参加</a>', page)
+        self.assertIn('<a href="https://s/1" target="_blank" rel="noopener">練習参加</a>', page)
 
     def test_failures_are_noted(self):
         self.assertIn("本日は 5ch、note を取得できませんでした", html(failures=["5ch", "note"]))
 
     def test_llm_failure_is_noted(self):
         self.assertIn("要約を作れなかった", html(digest={"links_only": True, "top": None}))
+
+    def test_pager_stays_in_same_tab(self):
+        self.assertIn('<a href="2026-11-11.html">', html(prev="2026-11-11"))
 
     def test_previous_issue_link(self):
         self.assertIn('href="2026-11-11.html"', html(prev="2026-11-11"))

@@ -15,7 +15,7 @@ def safe(url):
 
 
 def anchor(url, label):
-    return f'<a href="{escape(url)}">{escape(label)}</a>' if safe(url) else ""
+    return f'<a href="{escape(url)}" target="_blank" rel="noopener">{escape(label)}</a>' if safe(url) else ""
 
 
 def img(url):
