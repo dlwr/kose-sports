@@ -15,11 +15,581 @@
  },
  "digest": {
   "closed": false,
-  "links_only": true,
+  "links_only": false,
   "top": null,
-  "briefs": [],
-  "rumors": [],
-  "boards": []
+  "briefs": [
+   {
+    "headline": "12・12秋田戦で「1Dayインターンシップ」募集",
+    "body": "クラブは12月12日(土)のブラウブリッツ秋田戦に合わせた「1Dayインターンシップ」の募集を公式に告知した。詳細はクラブ公式のお知らせで確認できる。",
+    "links": [
+     {
+      "title": "12月12日(土)ブラウブリッツ秋田戦「1Dayインターンシップ」募集のお知らせ",
+      "url": "https://www.ventforet.jp/news/other/525715",
+      "source": "クラブ公式"
+     }
+    ],
+    "image": null
+   }
+  ],
+  "rumors": [
+   {
+    "headline": "外国人FW2人が練習参加、獲得検討と報道",
+    "body": "ナッシム・ベンカリファ（34歳、元スイス代表で広島・福岡でプレー）とチュクウディ（24歳、ナイジェリア、昨季までチェコ）が練習に参加し、クラブが獲得を検討していると伝えられた。2人ともフリーで、冬の移籍期間を待たずに獲得できる可能性があるという。練習を見た人からは、シュートの鋭さやスピード、細かいドリブルを評価する声が出ている。加入の正式発表はまだない。",
+    "origin": "山梨日日新聞（サンニチ）の報道として掲示板で共有",
+    "confidence": 4,
+    "links": [
+     {
+      "title": "らスレ 218",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1794368995/218",
+      "source": "らスレ"
+     },
+     {
+      "title": "超掲示板 906366",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906366#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906460",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906460#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906443",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906443#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906354",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906354#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906400",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906400#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906371",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906371#anc",
+      "source": "超掲示板"
+     }
+    ],
+    "image": null
+   },
+   {
+    "headline": "インドネシア方面で動きか、現地有力クラブの公式投稿に甲府ユニ",
+    "body": "インドネシアの有力クラブの公式アカウントに甲府のユニフォームが登場し、大きな反響を呼んだという。これを受けて、業務提携や新規事業の始動を期待する書き込みが相次いでいる。この国との縁は高原氏の関わりで長く、アカデミー分野の活動や現地トップチームとの接点にも触れる声がある。ただ、具体的な契約や発表は確認できない。",
+    "origin": "掲示板の書き込み（現地クラブのSNS投稿の目撃談）",
+    "confidence": 2,
+    "links": [
+     {
+      "title": "超掲示板 906424",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906424#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906420",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906420#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906429",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906429#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906451",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906451#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906491",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906491#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "5ch 甲府スレ 237",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/237",
+      "source": "5ch 甲府スレ"
+     },
+     {
+      "title": "超掲示板 906332",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906332#anc",
+      "source": "超掲示板"
+     }
+    ],
+    "image": null
+   },
+   {
+    "headline": "渋谷監督の去就、解任論と続投観測が交錯",
+    "body": "掲示板では解任を求める声が多い一方、残り6試合は監督が変わらないとの見方や、前日の練習で通常どおり指導していたという目撃談もある。次の監督候補として井原氏の名前を挙げる書き込みもあるが、根拠は示されていない。クラブからの発表はない。",
+    "origin": "掲示板の書き込み",
+    "confidence": 2,
+    "links": [
+     {
+      "title": "らスレ 916",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1794142270/916",
+      "source": "らスレ"
+     },
+     {
+      "title": "超掲示板 906345",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906345#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906272",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906272#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906215",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906215#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "5ch 甲府スレ 228",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/228",
+      "source": "5ch 甲府スレ"
+     },
+     {
+      "title": "超掲示板 906368",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906368#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906188",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906188#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906172",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906172#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906168",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906168#anc",
+      "source": "超掲示板"
+     }
+    ],
+    "image": null
+   },
+   {
+    "headline": "「身売り案件は甲府か」、非公開のクラブ売却案件を巡る憶測",
+    "body": "非公開のM&A仲介案件に載った「J2所属」クラブの売却案件が甲府ではないかとの推測が、掲示板で盛り上がっている。売上や純資産、株主構成の条件から甲府が当てはまるとする書き込みがある。一方で、県の会議や直近の黒字を理由に懐疑的な声や、鳥栖、大分、水戸など他クラブを挙げる声もある。裏付けとなる情報はなく、あくまで憶測の域を出ない。",
+    "origin": "掲示板の複数の書き込み",
+    "confidence": 2,
+    "links": [
+     {
+      "title": "超掲示板 906323",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906323#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906321",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906321#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906304",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906304#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906303",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906303#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906296",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906296#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906324",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906324#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906264",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906264#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906262",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906262#anc",
+      "source": "超掲示板"
+     }
+    ],
+    "image": null
+   },
+   {
+    "headline": "得点ランク首位タイの内藤大和、冬の移籍を巡る憶測",
+    "body": "今季7得点で得点ランク同率トップの内藤大和について、移籍金を目当てに冬に移籍するのではとの憶測が掲示板に出ている。外国人FW獲得と絡めて語る書き込みもあるが、オファーなど具体的な根拠は示されていない。チームに残ってほしいという声が大勢だ。",
+    "origin": "掲示板の複数の書き込み",
+    "confidence": 2,
+    "links": [
+     {
+      "title": "超掲示板 906511",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906511#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906501",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906501#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906446",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906446#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906434",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906434#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906425",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906425#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906438",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906438#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906520",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906520#anc",
+      "source": "超掲示板"
+     }
+    ],
+    "image": null
+   },
+   {
+    "headline": "吉田麻也の獲得調査説、ネタとの指摘も",
+    "body": "フリーの吉田麻也に甲府が関心を持っているとの話が掲示板に出た。「どこ情報か」と出どころを問う声が相次ぎ、掲示板の冗談から広まった嘘だとの指摘もある。年俸面で現実的でないとの見方が強く、確かな裏付けはない。",
+    "origin": "掲示板の書き込み",
+    "confidence": 2,
+    "links": [
+     {
+      "title": "超掲示板 906458",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906458#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906449",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906449#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906496",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906496#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906495",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906495#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906492",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906492#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906480",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906480#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906464",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906464#anc",
+      "source": "超掲示板"
+     }
+    ],
+    "image": null
+   }
+  ],
+  "boards": [
+   {
+    "headline": "外国人補強の動きに「動いただけまし」、ただし監督が変わらなければとの慎重論も",
+    "body": "新外国人候補（ベンカリファら）の練習参加が話題の中心。危機感を持って動いたこと自体を評価する声が出ている。一方で、ベンカリファの選択や稼働率を疑問視する書き込みや、渋谷監督が続投するなら意味がないとの声も目立つ。ナイジェリア人FWの名前から過去の甲府の外国人選手を思い出す書き込みもある。連敗を受けて、システムありきの戦術からの転換を求める意見も出ている。またクラブの11月6日の声明を踏まえ、監督交代以外に何を改善すべきかを議論するやり取りも続いた。最下位に沈む現状に降格やJ3への覚悟を語る書き込みもあり、全体に重苦しい空気だ。",
+    "board": "5ch 甲府スレ",
+    "links": [
+     {
+      "title": "5ch 甲府スレ 246",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/246",
+      "source": "5ch 甲府スレ"
+     },
+     {
+      "title": "5ch 甲府スレ 244",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/244",
+      "source": "5ch 甲府スレ"
+     },
+     {
+      "title": "5ch 甲府スレ 243",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/243",
+      "source": "5ch 甲府スレ"
+     },
+     {
+      "title": "5ch 甲府スレ 241",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/241",
+      "source": "5ch 甲府スレ"
+     },
+     {
+      "title": "5ch 甲府スレ 240",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/240",
+      "source": "5ch 甲府スレ"
+     },
+     {
+      "title": "5ch 甲府スレ 239",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/239",
+      "source": "5ch 甲府スレ"
+     },
+     {
+      "title": "5ch 甲府スレ 238",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/238",
+      "source": "5ch 甲府スレ"
+     },
+     {
+      "title": "5ch 甲府スレ 236",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/236",
+      "source": "5ch 甲府スレ"
+     },
+     {
+      "title": "5ch 甲府スレ 235",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/235",
+      "source": "5ch 甲府スレ"
+     },
+     {
+      "title": "5ch 甲府スレ 230",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/230",
+      "source": "5ch 甲府スレ"
+     },
+     {
+      "title": "5ch 甲府スレ 229",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/229",
+      "source": "5ch 甲府スレ"
+     },
+     {
+      "title": "5ch 甲府スレ 228",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/228",
+      "source": "5ch 甲府スレ"
+     },
+     {
+      "title": "5ch 甲府スレ 225",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/225",
+      "source": "5ch 甲府スレ"
+     },
+     {
+      "title": "5ch 甲府スレ 223",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/223",
+      "source": "5ch 甲府スレ"
+     },
+     {
+      "title": "5ch 甲府スレ 222",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/222",
+      "source": "5ch 甲府スレ"
+     },
+     {
+      "title": "5ch 甲府スレ 218",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/218",
+      "source": "5ch 甲府スレ"
+     },
+     {
+      "title": "5ch 甲府スレ 217",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/217",
+      "source": "5ch 甲府スレ"
+     },
+     {
+      "title": "5ch 甲府スレ 216",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/216",
+      "source": "5ch 甲府スレ"
+     },
+     {
+      "title": "5ch 甲府スレ 215",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/215",
+      "source": "5ch 甲府スレ"
+     },
+     {
+      "title": "5ch 甲府スレ 242",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/242",
+      "source": "5ch 甲府スレ"
+     }
+    ],
+    "image": null
+   },
+   {
+    "headline": "期待と警戒が同居、外国人FW練習参加にざわつく",
+    "body": "サンニチ報道を受け、ベンカリファとチュクウディの練習参加で盛り上がった。「ようやく動いた」と歓迎し、2トップや大和とのコンビに期待する妄想スタメンも飛び交う。一方で、コンディションや費用、守備の崩壊やDF補強が先だとの指摘、渋谷監督が使いこなせるのかという疑問、「ガス抜きでは」という冷めた見方もある。目先では藤枝戦、八戸戦に連勝して降格圏を脱出したいとの声が強い。他にも、身売り報道への反応、インドネシアとの縁への期待、吉田麻也を巡る噂とその否定などが話題になった。全体の空気は、望みをつなぎつつも危機感は消えない様子だ。",
+    "board": "超掲示板",
+    "links": [
+     {
+      "title": "超掲示板 906577",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906577#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906575",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906575#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906572",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906572#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906567",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906567#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906553",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906553#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906551",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906551#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906549",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906549#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906545",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906545#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906532",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906532#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906530",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906530#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906527",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906527#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906525",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906525#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906523",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906523#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906517",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906517#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906516",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906516#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906505",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906505#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906494",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906494#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906481",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906481#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906478",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906478#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906450",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906450#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906444",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906444#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906439",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906439#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906406",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906406#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906396",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906396#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906386",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906386#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906378",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906378#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906374",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906374#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906373",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906373#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906366",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906366#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906496",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906496#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906424",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906424#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906303",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906303#anc",
+      "source": "超掲示板"
+     }
+    ],
+    "image": null
+   }
+  ]
  },
  "news": [
   {
@@ -75,7 +645,5 @@
    "image": "https://assets.st-note.com/production/uploads/images/334228488/rectangle_large_type_2_a2a21b934c22673ec9eddf722f8cc727.jpg?width=800"
   }
  ],
- "failures": [
-  "要約"
- ]
+ "failures": []
 }
