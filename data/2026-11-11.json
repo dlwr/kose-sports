@@ -16,11 +16,51 @@
  "digest": {
   "closed": false,
   "links_only": false,
-  "top": null,
+  "top": {
+   "headline": "外国人2選手が練習参加　打開の一手なるか",
+   "body": "山梨日日新聞が11日、外国人2選手がＶＦ甲府の練習に参加したと報じた。\n甲府は現在3勝3分10敗の20位。14日14時から、第17節で藤枝ＭＹＦＣと敵地で戦う。\n現時点で獲得の発表はなく、2選手の動向に注目が集まる。",
+   "links": [
+    {
+     "title": "ＶＦ甲府 外国人２選手が練習参加",
+     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5GREhlQUxuRXE4S2tUV1FHVE9wMU42d3NMTkpTTG1ZaURKaE01dnQybU1ZeXJ4dTl2aFJQNmVLMjVpMGM5LXNhWWd6ektYRE5STE1tZ1NxR3c4Q3pmdlZqUnZZU2xBNlEwQW9WdHcyODFXaXJ0?oc=5",
+     "source": "山梨日日新聞"
+    },
+    {
+     "title": "らスレ 218",
+     "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1794368995/218",
+     "source": "らスレ"
+    }
+   ],
+   "image": null
+  },
   "briefs": [
    {
-    "headline": "12・12秋田戦で「1Dayインターンシップ」募集",
-    "body": "クラブ公式が、12月12日(土)のブラウブリッツ秋田戦に合わせた「1Dayインターンシップ」の募集を発表した。",
+    "headline": "角市が作戦ボードを寄贈",
+    "body": "角市がＶＦ甲府に作戦ボードを寄贈した。山梨日日新聞が11日夜に報じた。",
+    "links": [
+     {
+      "title": "角市がＶＦ甲府に作戦ボード寄贈",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9teEtDMHAteHFlTzdfV1l6enlBWEVTUlpfVC04MDJWVWtqZC1Qd0VvbHM3VF9ZRnRaaGhMb2NQLW1oY09nVktpZ0FzUFNqMGpLd2NFMDNwbVZhNWcxV28tZU5MWWw?oc=5",
+      "source": "山梨日日新聞"
+     }
+    ],
+    "image": null
+   },
+   {
+    "headline": "14日は敵地で藤枝戦　20位から巻き返しへ",
+    "body": "甲府は3勝3分10敗の20位。14日14時から第17節で藤枝ＭＹＦＣと敵地で対戦する。",
+    "links": [
+     {
+      "title": "順位・日程・結果・個人成績｜J2【2026/27】",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBNWmREVFpUWEo0Mkwwcjh3X0dXMU5HNTVJbzRNZC1NSFFocUMxR3FTZ0xsdmtfcy1USk54SG9ZUU01UENCa1NVYzZramZsa3JWQmxtLWcxSHh1UGtmVUZZY1ZtSlI?oc=5",
+      "source": "フットボールチャンネル"
+     }
+    ],
+    "image": null
+   },
+   {
+    "headline": "12月12日の秋田戦で「1Dayインターンシップ」募集",
+    "body": "クラブ公式サイトが、12月12日（土）のブラウブリッツ秋田戦で「1Dayインターンシップ」の募集を告知した。",
     "links": [
      {
       "title": "12月12日(土)ブラウブリッツ秋田戦「1Dayインターンシップ」募集のお知らせ",
@@ -33,19 +73,19 @@
   ],
   "rumors": [
    {
-    "headline": "外国人FW2人が練習参加、獲得検討か",
-    "body": "山梨日日新聞（サンニチ）が11日、甲府が外国人2選手を練習に参加させていると報じた。掲示板ではナッシム・ベンカリファ（34歳、元スイス代表で広島・福岡でもプレー）とチュクウディ（24歳、ナイジェリア）の名が挙がり、いずれもフリーとされる。練習を見たという書き込みには、シュートや突破力への好評価もあった。クラブの正式発表はなく、獲得するかどうかは未定。",
-    "origin": "山梨日日新聞（サンニチ）の報道（らスレ経由）。人名や年齢は超掲示板の書き込みによる",
-    "confidence": 4,
+    "headline": "練習参加の2人は元スイス代表FWとナイジェリア人FWか",
+    "body": "練習参加の2人は、元スイス代表で広島・福岡でもプレーしたベンカリファ（34歳）と、ナイジェリア出身で昨季までチェコリーグにいたチュクウディ（24歳）との見方が掲示板で広がっている。いずれも現在フリーで、冬の移籍期間を待たずに獲得できる可能性が指摘されている。練習を見たとする書き込みには、積極的に声を出してボールを求めていたとの評価もあるが、獲得が決まったわけではない。",
+    "origin": "超掲示板、らスレの複数の書き込み。山梨日日新聞の練習参加報道を受けた内容",
+    "confidence": 2,
     "links": [
-     {
-      "title": "らスレ 218",
-      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1794368995/218",
-      "source": "らスレ"
-     },
      {
       "title": "超掲示板 906366",
       "url": "https://bm.best-hit.tv/ventforet/?anc=906366#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906400",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906400#anc",
       "source": "超掲示板"
      },
      {
@@ -54,22 +94,56 @@
       "source": "超掲示板"
      },
      {
-      "title": "超掲示板 906482",
-      "url": "https://bm.best-hit.tv/ventforet/?anc=906482#anc",
-      "source": "超掲示板"
+      "title": "らスレ 309",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1794368995/309",
+      "source": "らスレ"
      },
      {
-      "title": "超掲示板 906560",
-      "url": "https://bm.best-hit.tv/ventforet/?anc=906560#anc",
+      "title": "超掲示板 906482",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906482#anc",
       "source": "超掲示板"
      }
     ],
     "image": null
    },
    {
-    "headline": "内藤大和に移籍の噂、冬に向け残留を願う声",
-    "body": "得点ランク首位タイの内藤大和をめぐり、移籍金を残す形での放出や、獲得オファーが届いているのではとの書き込みが複数ある。一方で「残って残留へ導いてほしい」との声も多い。",
-    "origin": "超掲示板の複数の書き込み（具体的な出どころは不明）",
+    "headline": "渋谷監督の続投は当面濃厚か　掲示板に観測",
+    "body": "掲示板では、残り6試合は監督交代はないとの見方や、コーチ昇格なら早まる可能性、ウインターブレイクに入ってから外部招聘で交代するとの予想が出ている。「昨日の練習で普通に指導していた」との目撃談もある。一方、藤枝戦の結果次第で動くとの声もあり、見方は割れている。",
+    "origin": "超掲示板、らスレの複数の書き込み",
+    "confidence": 2,
+    "links": [
+     {
+      "title": "超掲示板 906345",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906345#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906272",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906272#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "らスレ 916",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1794142270/916",
+      "source": "らスレ"
+     },
+     {
+      "title": "超掲示板 906215",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906215#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 906188",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906188#anc",
+      "source": "超掲示板"
+     }
+    ],
+    "image": null
+   },
+   {
+    "headline": "内藤大和に冬の移籍観測　残留を望む声",
+    "body": "得点ランキングで同率トップの内藤大和について、冬の移籍を懸念する書き込みが相次いでいる。一部には、オファーがあり移籍金で放出されるのではとの声もある。ベンカリファ獲得の時期次第で移籍確定との見立てもあるが、根拠は示されていない。",
+    "origin": "超掲示板の複数の書き込み",
     "confidence": 2,
     "links": [
      {
@@ -83,8 +157,8 @@
       "source": "超掲示板"
      },
      {
-      "title": "超掲示板 906438",
-      "url": "https://bm.best-hit.tv/ventforet/?anc=906438#anc",
+      "title": "超掲示板 906501",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906501#anc",
       "source": "超掲示板"
      },
      {
@@ -101,9 +175,9 @@
     "image": null
    },
    {
-    "headline": "インドネシア強豪の公式アカウントに甲府ユニ、提携の布石か",
-    "body": "インドネシアの有名クラブの公式アカウントに、甲府のユニフォームを着た投稿が出たとの書き込みが相次いだ。業務提携ではないかとの見方があり、現地の子ども向け活動やバンドンのクラブとの関係を指摘する声もある。クラブからの公式発表は確認できていない。",
-    "origin": "超掲示板の複数の書き込み",
+    "headline": "インドネシアの人気クラブ公式アカウントに甲府ユニ　提携の観測",
+    "body": "インドネシアの有名クラブの公式アカウントに甲府のユニフォームが登場し、掲示板では業務提携の動きではないかとの見方が出ている。現地での普及活動の経緯を踏まえ、今後も動きがあるとの期待が書き込まれている。クラブからの詳細な発表は素材にない。",
+    "origin": "超掲示板、5ch甲府スレの複数の書き込み",
     "confidence": 2,
     "links": [
      {
@@ -127,46 +201,17 @@
       "source": "超掲示板"
      },
      {
-      "title": "超掲示板 906435",
-      "url": "https://bm.best-hit.tv/ventforet/?anc=906435#anc",
-      "source": "超掲示板"
+      "title": "5ch 甲府スレ 237",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/237",
+      "source": "5ch 甲府スレ"
      }
     ],
     "image": null
    },
    {
-    "headline": "渋谷監督は当面続投か、藤枝戦が分岐点との見方も",
-    "body": "「昨日の練習を普通に指導していたので解任はない」との書き込みや、中断期間までは続投とみる見方がある。らスレにも監督交代はなさそうとの書き込みがあった。一方、藤枝戦の結果次第で動くとの予想もあり、見方は割れている。",
-    "origin": "超掲示板、らスレの書き込み",
-    "confidence": 2,
-    "links": [
-     {
-      "title": "超掲示板 906272",
-      "url": "https://bm.best-hit.tv/ventforet/?anc=906272#anc",
-      "source": "超掲示板"
-     },
-     {
-      "title": "超掲示板 906345",
-      "url": "https://bm.best-hit.tv/ventforet/?anc=906345#anc",
-      "source": "超掲示板"
-     },
-     {
-      "title": "超掲示板 906215",
-      "url": "https://bm.best-hit.tv/ventforet/?anc=906215#anc",
-      "source": "超掲示板"
-     },
-     {
-      "title": "らスレ 916",
-      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1794142270/916",
-      "source": "らスレ"
-     }
-    ],
-    "image": null
-   },
-   {
-    "headline": "クラブ売却説、「甲府っぽい」との推測が浮上",
-    "body": "M&A仲介の売却案件の条件に合うJ2クラブを、決算数字などから絞り込む書き込みがあり、その候補の一つに甲府が挙がっている。一方で、株主構成が複雑なことなどを理由に否定的な声や、他クラブの可能性を指摘する声もある。クラブからの発表や報道は確認できていない。",
-    "origin": "超掲示板の書き込み（案件情報をもとにした個人の推測）",
+    "headline": "売却案件は「甲府っぽい」との推測が拡散　決め手はなし",
+    "body": "Jクラブの売却案件が話題になり、掲示板では売上や純資産などの条件から「甲府ではないか」とする推測が広がっている。ただ、同じ条件に当てはまるクラブは他にもあり、検証した書き込み自身も特定は難しいと結論づけている。株主構成から売却は考えにくいとの意見も出ている。",
+    "origin": "超掲示板の複数の書き込み",
     "confidence": 2,
     "links": [
      {
@@ -185,8 +230,8 @@
       "source": "超掲示板"
      },
      {
-      "title": "超掲示板 906296",
-      "url": "https://bm.best-hit.tv/ventforet/?anc=906296#anc",
+      "title": "超掲示板 906264",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906264#anc",
       "source": "超掲示板"
      },
      {
@@ -198,11 +243,16 @@
     "image": null
    },
    {
-    "headline": "吉田麻也獲りの話、冗談との指摘が出る",
-    "body": "元日本代表DFの吉田麻也の獲得調査をめぐる書き込みが出たが、ここでの冗談から広まった話で、年俸面でも難しいとの指摘が続いた。出どころは確認されていない。",
-    "origin": "超掲示板の書き込み（冗談から広まったとの指摘あり）",
-    "confidence": 2,
+    "headline": "吉田麻也の調査説は冗談か",
+    "body": "フリーの吉田麻也を甲府が調査しているとの書き込みが出たが、別の書き込みで「掲示板で誰かがふざけて言った嘘」と否定されている。出どころは確認できていない。",
+    "origin": "超掲示板の書き込み",
+    "confidence": 1,
     "links": [
+     {
+      "title": "超掲示板 906458",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906458#anc",
+      "source": "超掲示板"
+     },
      {
       "title": "超掲示板 906496",
       "url": "https://bm.best-hit.tv/ventforet/?anc=906496#anc",
@@ -217,16 +267,6 @@
       "title": "超掲示板 906492",
       "url": "https://bm.best-hit.tv/ventforet/?anc=906492#anc",
       "source": "超掲示板"
-     },
-     {
-      "title": "超掲示板 906458",
-      "url": "https://bm.best-hit.tv/ventforet/?anc=906458#anc",
-      "source": "超掲示板"
-     },
-     {
-      "title": "超掲示板 906449",
-      "url": "https://bm.best-hit.tv/ventforet/?anc=906449#anc",
-      "source": "超掲示板"
      }
     ],
     "image": null
@@ -234,8 +274,8 @@
   ],
   "boards": [
    {
-    "headline": "外国人補強の動きに評価と不安、クラブ運営への議論も続く",
-    "body": "外国人FWの練習参加を受け、「動かないよりはいい」と危機感の表れとして評価する声がある。一方で、稼働率への不安や、渋谷監督のもとで起用されるのかを疑う声も多い。後半には、11月6日のクラブ声明を踏まえ、補強基準の明確化、コンディション管理、強化体制の一本化など、監督交代以外に何を改善すべきかを論じる流れが続いた。全体に不満と閉塞感が強い空気。",
+    "headline": "外国人補強の動きに「動いただけ評価」　ただし監督続投なら意味なしの声も",
+    "body": "外国人2人の練習参加を受け、「動いたこと自体は評価できる」「危機感の表れ」という声が多い一方、「渋谷監督が続投なら補強の意味がない」「稼働率の読める選手を」との注文も目立つ。ベンカリファの名前が挙がり、選手の特性に合わせた戦い方への転換を求める書き込みが続く。クラブの11月6日の声明を踏まえ、監督交代以外にクラブが改善すべき点を具体的に論じる長文も出た。補強基準の明確化、怪我対策、一貫した編成方針などが挙がっていた。全体には危機感が強いが、議論自体は冷静に進んでいる。",
     "board": "5ch 甲府スレ",
     "links": [
      {
@@ -249,26 +289,26 @@
       "source": "5ch 甲府スレ"
      },
      {
-      "title": "5ch 甲府スレ 238",
-      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/238",
-      "source": "5ch 甲府スレ"
-     },
-     {
-      "title": "5ch 甲府スレ 235",
-      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/235",
+      "title": "5ch 甲府スレ 228",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/228",
       "source": "5ch 甲府スレ"
      },
      {
       "title": "5ch 甲府スレ 217",
       "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/217",
       "source": "5ch 甲府スレ"
+     },
+     {
+      "title": "5ch 甲府スレ 244",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/244",
+      "source": "5ch 甲府スレ"
      }
     ],
     "image": null
    },
    {
-    "headline": "「動いてホッとした」と「形だけでは」が交錯、藤枝戦へ緊張感",
-    "body": "サンニチの報を受け、外国人FW2人の練習参加を歓迎する声が目立つ。ナイジェリア出身の選手の動画や練習での評判を共有し、2トップ案も飛び交った。一方で、練習参加だけで獲得が決まったわけではないとの冷めた見方や、渋谷監督が起用するかを疑う声、DFや中盤の補強を求める声もある。藤枝、八戸との2連戦で最下位脱出をと願う声が強く、インドネシアとの動きやクラブ売却の議論にも話が及んだ。",
+    "headline": "練習参加の外国人に期待と「ガス抜き」疑念が交錯　藤枝戦は絶対勝利",
+    "body": "最大の話題は外国人FW2人の練習参加。「久々のサンニチ砲」「ようやく動いた」と歓迎する声が多く、動画やプレー集を見た高評価が相次いだ。一方、「獲得は藤枝・八戸戦前のガス抜きでは」「練習参加だけで盛り上がりすぎ」と冷めた見方もある。守備陣やボランチ、サイドの補強が先との指摘や、監督続投への不満も根強い。インドネシア関連の動きや内藤大和の去就、クラブ売却観測にも話が及んだ。何より藤枝戦に勝って降格圏を脱出したいとの空気が強く、選手や関係者への誹謗中傷を戒める書き込みもあった。",
     "board": "超掲示板",
     "links": [
      {
@@ -277,23 +317,23 @@
       "source": "超掲示板"
      },
      {
-      "title": "超掲示板 906450",
-      "url": "https://bm.best-hit.tv/ventforet/?anc=906450#anc",
+      "title": "超掲示板 906378",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906378#anc",
       "source": "超掲示板"
      },
      {
-      "title": "超掲示板 906419",
-      "url": "https://bm.best-hit.tv/ventforet/?anc=906419#anc",
+      "title": "超掲示板 906406",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906406#anc",
       "source": "超掲示板"
      },
      {
-      "title": "超掲示板 906577",
-      "url": "https://bm.best-hit.tv/ventforet/?anc=906577#anc",
+      "title": "超掲示板 906420",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906420#anc",
       "source": "超掲示板"
      },
      {
-      "title": "超掲示板 906373",
-      "url": "https://bm.best-hit.tv/ventforet/?anc=906373#anc",
+      "title": "超掲示板 906520",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906520#anc",
       "source": "超掲示板"
      }
     ],
@@ -302,6 +342,20 @@
   ]
  },
  "news": [
+  {
+   "source": "山梨日日新聞",
+   "title": "角市がＶＦ甲府に作戦ボード寄贈",
+   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9teEtDMHAteHFlTzdfV1l6enlBWEVTUlpfVC04MDJWVWtqZC1Qd0VvbHM3VF9ZRnRaaGhMb2NQLW1oY09nVktpZ0FzUFNqMGpLd2NFMDNwbVZhNWcxV28tZU5MWWw?oc=5",
+   "published": "2026-11-11T19:05:52+09:00",
+   "image": null
+  },
+  {
+   "source": "山梨日日新聞",
+   "title": "ＶＦ甲府 外国人２選手が練習参加",
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5GREhlQUxuRXE4S2tUV1FHVE9wMU42d3NMTkpTTG1ZaURKaE01dnQybU1ZeXJ4dTl2aFJQNmVLMjVpMGM5LXNhWWd6ektYRE5STE1tZ1NxR3c4Q3pmdlZqUnZZU2xBNlEwQW9WdHcyODFXaXJ0?oc=5",
+   "published": "2026-11-11T16:41:47+09:00",
+   "image": null
+  },
   {
    "source": "FNNプライムオンライン",
    "title": "「ミッション・インポッシブルと思われるほど闘志が湧く」 J1アビスパ福岡 城福新監督が就任会見 残留へ意気込み語る 21日・川崎F戦から指揮",
@@ -348,7 +402,5 @@
    "image": "https://assets.st-note.com/production/uploads/images/334611233/rectangle_large_type_2_e39d724fbb1e9bfed0b022959f533d3a.jpg?width=800"
   }
  ],
- "failures": [
-  "山梨日日新聞"
- ]
+ "failures": []
 }
