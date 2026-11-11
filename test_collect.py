@@ -20,10 +20,12 @@ OFFICIAL = """<ul><li> <a class="newsList__item" href="/news/other/525715"> <div
 <p class="top-news__information__detail">新加入選手のお知らせ</p> </div>
 <div class="newsList__itemImage"> <img alt="PHOTO" src="https://cdn.www.ventforet.jp/images/p.jpg" /> </div> </a> </li></ul>"""
 
-SANNICHI = """<dl> <dt> <a href="/article/2026/11/11/80733244">角市がＶＦ甲府に作戦ボード寄贈</a>
-<span class="date">(11/11 19:05)</span> <span class="paymark"></span> </dt>
-<dd> <img src=https://cdn.sannichi.co.jp/img/a.jpg class="chk_exists" > </dd>
-<dt> <a href="/article/2026/11/11/80733173">ＶＦ甲府 外国人２選手が練習参加</a> <span class="date">(11/11 16:41)</span> </dt> <dd> </dd></dl>"""
+GNEWS_SANNICHI = """<rss><channel>
+<item><title>ＶＦ甲府 外国人２選手が練習参加 - sannichi.co.jp</title><link>https://news.google.com/rss/articles/S1?oc=5</link>
+<pubDate>Wed, 11 Nov 2026 07:41:00 GMT</pubDate><source url="https://www.sannichi.co.jp">sannichi.co.jp</source></item>
+<item><title>今朝の気温（11日午前6時） - sannichi.co.jp</title><link>https://news.google.com/rss/articles/S2?oc=5</link>
+<pubDate>Wed, 11 Nov 2026 07:00:00 GMT</pubDate><source url="https://www.sannichi.co.jp">sannichi.co.jp</source></item>
+</channel></rss>"""
 
 HOCHI = """<ul><li class="article-list__item"> <a href="/articles/20261109-OHT1T51310.html" class="article-list__unit">
 <img src="data:image/gif;base64,R0" data-src="https://hochi.news/images/a.jpg" alt="x">
@@ -90,6 +92,9 @@ class ParseNewsTest(unittest.TestCase):
     def test_gnews_published_in_jst(self):
         self.assertEqual(collect.parse_gnews(GNEWS)[0]["published"], "2026-11-10T14:04:50+09:00")
 
+    def test_gnews_names_sannichi(self):
+        self.assertEqual(collect.parse_gnews(GNEWS_SANNICHI)[0]["source"], "山梨日日新聞")
+
     def test_official_url_is_absolute(self):
         self.assertEqual(collect.parse_official(OFFICIAL)[0]["url"], "https://www.ventforet.jp/news/other/525715")
 
@@ -104,15 +109,6 @@ class ParseNewsTest(unittest.TestCase):
 
     def test_official_image(self):
         self.assertEqual(collect.parse_official(OFFICIAL)[1]["image"], "https://cdn.www.ventforet.jp/images/p.jpg")
-
-    def test_sannichi_published_takes_year_from_url(self):
-        self.assertEqual(collect.parse_sannichi(SANNICHI)[0]["published"], "2026-11-11T19:05:00+09:00")
-
-    def test_sannichi_image(self):
-        self.assertEqual(collect.parse_sannichi(SANNICHI)[0]["image"], "https://cdn.sannichi.co.jp/img/a.jpg")
-
-    def test_sannichi_item_without_image(self):
-        self.assertIsNone(collect.parse_sannichi(SANNICHI)[1]["image"])
 
     def test_hochi_keeps_only_kofu_titles(self):
         self.assertEqual([i["title"] for i in collect.parse_hochi(HOCHI)], ["【甲府】渋谷監督「前を向く」"])
@@ -222,9 +218,9 @@ class ParseClubTest(unittest.TestCase):
 class CollectTest(unittest.TestCase):
     def fetch(self, url, encoding="utf-8"):
         pages = {
+            "sannichi.co.jp": GNEWS_SANNICHI,
             "news.google.com": GNEWS,
-            "ventforet.jp": OFFICIAL,
-            "sannichi": globals()["SANNICHI"],
+            "ventforet.jp": globals()["OFFICIAL"],
             "hochi": HOCHI,
             "youtube": YOUTUBE,
             "note.com": NOTE,
@@ -253,7 +249,11 @@ class CollectTest(unittest.TestCase):
 
     def test_news_inside_window_is_kept(self):
         titles = [n["title"] for n in self.run_collect()["news"]]
-        self.assertIn("角市がＶＦ甲府に作戦ボード寄贈", titles)
+        self.assertIn("ＶＦ甲府 外国人２選手が練習参加", titles)
+
+    def test_sannichi_items_about_other_topics_are_dropped(self):
+        titles = [n["title"] for n in self.run_collect()["news"]]
+        self.assertNotIn("今朝の気温（11日午前6時）", titles)
 
     def test_news_is_newest_first(self):
         published = [n["published"] for n in self.run_collect()["news"]]
@@ -269,18 +269,18 @@ class CollectTest(unittest.TestCase):
         self.assertEqual(self.run_collect()["club"]["rank"], 20)
 
     def test_broken_source_is_reported(self):
-        self.broken = {"sannichi"}
-        self.assertEqual(self.run_collect()["failures"], ["山梨日日新聞"])
+        self.broken = {"ventforet.jp"}
+        self.assertEqual(self.run_collect()["failures"], ["クラブ公式"])
 
     def test_broken_source_does_not_stop_others(self):
-        self.broken = {"sannichi"}
+        self.broken = {"ventforet.jp"}
         self.assertTrue(self.run_collect()["boards"]["cho"])
 
     def test_list_page_without_items_is_reported(self):
-        global SANNICHI
-        original, SANNICHI = SANNICHI, "<html>blocked</html>"
-        self.addCleanup(lambda: globals().update(SANNICHI=original))
-        self.assertEqual(self.run_collect()["failures"], ["山梨日日新聞"])
+        global OFFICIAL
+        original, OFFICIAL = OFFICIAL, "<html>blocked</html>"
+        self.addCleanup(lambda: globals().update(OFFICIAL=original))
+        self.assertEqual(self.run_collect()["failures"], ["クラブ公式"])
 
     def test_broken_subject_reports_5ch(self):
         self.broken = {"subject.txt"}

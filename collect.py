@@ -14,11 +14,14 @@ WINDOW = timedelta(hours=26)
 ATTEMPTS = 3
 CHO_MAX_PAGES = 60
 KOFU = re.compile("甲府|ヴァンフォーレ|ＶＦ")
+VF = re.compile("ＶＦ|VF|ヴァンフォーレ")
 CLUB = "ヴァンフォーレ甲府"
+SOURCE_NAMES = {"sannichi.co.jp": "山梨日日新聞"}
 
 GNEWS_URL = "https://news.google.com/rss/search?q=" + quote(CLUB) + "+when:2d&hl=ja&gl=JP&ceid=JP:ja"
 OFFICIAL_URL = "https://www.ventforet.jp/news/all"
-SANNICHI_URL = "https://www.sannichi.co.jp/news/vfk"
+# さんにちEye はデータセンターの IP に空の応答を返すので、Google ニュースの索引から拾う
+GNEWS_SANNICHI_URL = "https://news.google.com/rss/search?q=site:sannichi.co.jp+" + quote("ＶＦ甲府") + "+when:2d&hl=ja&gl=JP&ceid=JP:ja"
 HOCHI_URL = "https://hochi.news/search?q=" + quote("甲府")
 YOUTUBE_URL = "https://www.youtube.com/feeds/videos.xml?channel_id=UCtdA3-T8-1wLltOxVGuXyDg"
 NOTE_URL = "https://note.com/hashtag/" + quote(CLUB) + "/rss"
@@ -66,6 +69,7 @@ def parse_gnews(xml):
     for e in ET.fromstring(xml).iter("item"):
         source = e.findtext("source") or "Google ニュース"
         title = e.findtext("title").removesuffix(f" - {source}")
+        source = SOURCE_NAMES.get(source, source)
         published = parsedate_to_datetime(e.findtext("pubDate")).astimezone(JST).isoformat()
         items.append(item(source, title, e.findtext("link"), published))
     return items
@@ -80,26 +84,6 @@ def parse_official(html):
         image = img.group(1) if img and "notfound" not in img.group(1) else None
         items.append(
             item("クラブ公式", text_of(title.group(1)), "https://www.ventforet.jp" + href, iso(*day.groups(), 23, 59), image)
-        )
-    return items
-
-
-def parse_sannichi(html):
-    pattern = (
-        r'<dt>\s*<a href="(/article/(\d{4})/[^"]+)">(.*?)</a>\s*'
-        r'<span class="date">\((\d+)/(\d+) (\d+):(\d+)\)</span>.*?</dt>\s*<dd>(.*?)</dd>'
-    )
-    items = []
-    for href, year, title, mo, d, h, mi, dd in re.findall(pattern, html, re.S):
-        img = re.search(r"<img src=[\"']?([^\s\"'>]+)", dd)
-        items.append(
-            item(
-                "山梨日日新聞",
-                text_of(title),
-                "https://www.sannichi.co.jp" + href,
-                iso(year, mo, d, h, mi),
-                img and img.group(1),
-            )
         )
     return items
 
@@ -259,7 +243,9 @@ def collect(now, fetch=fetch, sleep=time.sleep):
 
     news = attempt("Google ニュース", lambda: parse_gnews(fetch(GNEWS_URL)), [])
     news += attempt("クラブ公式", lambda: listing(OFFICIAL_URL, parse_official), [])
-    news += attempt("山梨日日新聞", lambda: listing(SANNICHI_URL, parse_sannichi), [])
+    news += attempt(
+        "山梨日日新聞", lambda: [n for n in parse_gnews(fetch(GNEWS_SANNICHI_URL)) if VF.search(n["title"])], []
+    )
     news += attempt("スポーツ報知", lambda: parse_hochi(fetch(HOCHI_URL)), [])
     videos = attempt("YouTube", lambda: parse_youtube(fetch(YOUTUBE_URL)), [])
     notes = attempt("note", lambda: parse_note(fetch(NOTE_URL)), [])
