@@ -66,14 +66,11 @@ def masthead(issue):
 def top(t):
     if not t:
         return ""
-    paras = [p for p in t["body"].split("\n") if p.strip()]
-    picture = img(t["image"])
-    side = picture or (f"<p>{escape(paras[0].strip())}</p>" if paras else "")
-    rest = paras if picture else paras[1:]
+    picture, text = img(t["image"]), paragraphs(t["body"])
+    below = f'<div class="body">{text}</div>' if picture else ""
     return (
         f'<article class="top"><div class="top-head"><h2>{escape(t["headline"])}</h2>'
-        f'<div class="top-side">{side}</div></div>'
-        f'<div class="body">{paragraphs(chr(10).join(rest))}</div>{sources(t["links"])}</article>'
+        f'<div class="top-side">{picture or text}</div></div>{below}{sources(t["links"])}</article>'
     )
 
 

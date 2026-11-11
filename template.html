@@ -36,11 +36,12 @@ img { display: block; max-width: 100%; }
 .score b { white-space: nowrap; color: var(--yellow); font-size: 1.15em; padding: 0 0.15em; }
 
 .top { padding: 18px 0 6px; }
-.top-head { display: flex; flex-direction: row-reverse; gap: 12px; align-items: stretch; }
-.top-head h2 { flex: none; margin: 0; writing-mode: vertical-rl; max-height: min(92vw, 25rem); padding: 10px 8px; background: var(--red); color: #fff; font: 900 clamp(1.75rem, 8.4vw, 2.9rem)/1.18 var(--gothic); letter-spacing: 0.02em; text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.55); }
+.top-head { display: flex; flex-direction: row-reverse; gap: 12px; align-items: flex-start; }
+.top-head h2 { flex: none; margin: 0; writing-mode: vertical-rl; text-orientation: upright; text-wrap: balance; word-break: auto-phrase; max-height: min(92vw, 25rem); padding: 10px 8px; background: var(--red); color: #fff; font: 900 clamp(1.75rem, 8.4vw, 2.9rem)/1.18 var(--gothic); letter-spacing: 0.02em; text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.55); }
 .top-side { flex: 1; min-width: 0; }
 .top-side img { width: 100%; height: 100%; min-height: 12rem; max-height: 25rem; object-fit: cover; }
-.top-side p { margin: 0; font-size: 1.05rem; font-weight: 700; }
+.top-side p { margin: 0 0 0.7em; }
+.top-side p:first-child { font-size: 1.05rem; font-weight: 700; }
 .top .body { margin-top: 12px; }
 
 .sec { margin: 34px 0 0; border-top: 5px solid var(--ink); font: 900 1.05rem/1 var(--gothic); }

@@ -63,8 +63,8 @@ class RenderTest(unittest.TestCase):
     def test_body_paragraphs_are_split(self):
         self.assertIn("<p>一段落目</p><p>二段落目</p>", html(digest={"briefs": [topic()]}))
 
-    def test_top_without_image_leads_with_first_paragraph(self):
-        self.assertIn('<div class="top-side"><p>一段落目</p></div>', html())
+    def test_top_without_image_puts_body_beside_headline(self):
+        self.assertIn('<div class="top-side"><p>一段落目</p><p>二段落目</p></div>', html())
 
     def test_scraped_text_is_escaped(self):
         page = html(digest={"top": topic("<script>alert(1)</script>")})
