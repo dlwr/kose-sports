@@ -16,19 +16,26 @@ def load_issues(data):
 
 
 def publish(now, data, collector=collect.collect, llm=digest.call_claude):
-    day = now.astimezone(collect.JST).strftime("%Y-%m-%d")
-    earlier = [i for i in load_issues(data) if i["date"] < day][-SEEN_ISSUES:]
-    seen = {n["url"] for i in earlier for n in i["news"]}
-    got = collector(now)
+    now = now.astimezone(collect.JST)
+    day = now.strftime("%Y-%m-%d")
+    earlier = [i for i in load_issues(data) if i["date"] < day]
+    recent = earlier[-SEEN_ISSUES:]
+    seen = {x["url"] for i in recent for x in i["news"] + i["videos"]}
+    featured = {
+        l["url"] for i in earlier for t in [i["digest"]["top"], *i["digest"].get("reads", [])] if t for l in t["links"]
+    }
+    got = collector(now, since=earlier[-1].get("collected_at") if earlier else None)
     got["news"] = [n for n in got["news"] if n["url"] not in seen]
-    summary = digest.make_digest(got, day, llm)
+    got["videos"] = [v for v in got["videos"] if v["url"] not in seen]
+    got["reads"] = [r for r in got["reads"] if r["url"] not in featured]
+    summary = digest.make_digest(got, day, llm, recent)
     issue = {
         "date": day,
+        "collected_at": now.isoformat(),
         "club": {k: v for k, v in got["club"].items() if k != "players"},
         "digest": summary,
         "news": got["news"],
         "videos": got["videos"],
-        "notes": got["notes"],
         "failures": got["failures"] + (["要約"] if summary["links_only"] else []),
     }
     data.mkdir(exist_ok=True)
