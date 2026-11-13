@@ -132,6 +132,11 @@ def parse_official(html):
     return items
 
 
+def parse_official_photo(html):
+    photo = re.search(r'<img src="([^"]+)" alt="photo"', html)
+    return photo and photo.group(1)
+
+
 def parse_hochi(html):
     items = []
     for body in html.split('<li class="article-list__item">')[1:]:
@@ -324,8 +329,11 @@ def collect(now, fetch=fetch, sleep=time.sleep, since=None):
                 body = gnews_request(fetch(GNEWS_ARTICLE + article_id), article_id)
                 n["url"] = parse_gnews_answer(fetch(GNEWS_RESOLVE_URL, data=body))
                 sleep(1)
-            if not n["image"]:
-                n["image"] = parse_og_image(fetch(n["url"]))
+            official = n["source"] == "クラブ公式"
+            if official or not n["image"]:
+                page = fetch(n["url"])
+                # 公式の一覧の画像は 300px しかないので、本文の写真を優先する
+                n["image"] = (official and parse_official_photo(page)) or n["image"] or parse_og_image(page)
         except Exception as e:
             print(f"no photo for {n['title'][:20]}: {e!r}"[:200], file=sys.stderr)
         return n
