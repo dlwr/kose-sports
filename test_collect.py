@@ -21,6 +21,10 @@ OFFICIAL = """<ul><li> <a class="newsList__item" href="/news/other/525715"> <div
 <p class="top-news__information__detail">新加入選手のお知らせ</p> </div>
 <div class="newsList__itemImage"> <img alt="PHOTO" src="https://cdn.www.ventforet.jp/images/p.jpg" /> </div> </a> </li></ul>"""
 
+OFFICIAL_ARTICLE = """<meta property="og:image" content="https://www.ventforet.jp/uploads/aaa/original.jpg">
+<p>受賞のお知らせ</p><img src="https://cdn.www.ventforet.jp/uploads/bbb/original.jpg" alt="photo" title="photo">
+<img src="https://cdn.www.ventforet.jp/uploads/ccc/original.jpg" alt="photo" title="photo">"""
+
 GNEWS_SANNICHI = """<rss><channel>
 <item><title>ＶＦ甲府 外国人２選手が練習参加 - sannichi.co.jp</title><link>https://news.google.com/rss/articles/S1?oc=5</link>
 <pubDate>Wed, 11 Nov 2026 07:41:00 GMT</pubDate><source url="https://www.sannichi.co.jp">sannichi.co.jp</source></item>
@@ -131,6 +135,12 @@ class ParseNewsTest(unittest.TestCase):
 
     def test_official_image(self):
         self.assertEqual(collect.parse_official(OFFICIAL)[1]["image"], "https://cdn.www.ventforet.jp/images/p.jpg")
+
+    def test_official_photo_is_first_picture_in_article_body(self):
+        self.assertEqual(collect.parse_official_photo(OFFICIAL_ARTICLE), "https://cdn.www.ventforet.jp/uploads/bbb/original.jpg")
+
+    def test_official_article_without_body_picture(self):
+        self.assertIsNone(collect.parse_official_photo("<p>本文のみ</p>"))
 
     def test_hochi_keeps_only_kofu_titles(self):
         self.assertEqual([i["title"] for i in collect.parse_hochi(HOCHI)], ["【甲府】渋谷監督「前を向く」"])
@@ -295,6 +305,8 @@ class CollectTest(unittest.TestCase):
             "sannichi.co.jp/article": ARTICLE,
             "sannichi.co.jp": GNEWS_SANNICHI,
             "news.google.com": GNEWS,
+            "ventforet.jp/news/other/": OFFICIAL_ARTICLE,
+            "ventforet.jp/news/team/": "<p>本文のみ</p>",
             "ventforet.jp": globals()["OFFICIAL"],
             "hochi": HOCHI,
             "youtube": YOUTUBE,
@@ -358,6 +370,16 @@ class CollectTest(unittest.TestCase):
     def test_unresolved_link_is_not_a_source_failure(self):
         self.broken = {"batchexecute"}
         self.assertEqual(self.run_collect()["failures"], [])
+
+    def official_images(self, days_ago):
+        news = self.run_collect(now=NOW - timedelta(days=days_ago))["news"]
+        return [n["image"] for n in news if n["source"] == "クラブ公式"]
+
+    def test_official_item_gets_picture_from_article_body(self):
+        self.assertEqual(self.official_images(1), ["https://cdn.www.ventforet.jp/uploads/bbb/original.jpg"])
+
+    def test_official_item_keeps_list_picture_without_body_picture(self):
+        self.assertEqual(self.official_images(2)[1], "https://cdn.www.ventforet.jp/images/p.jpg")
 
     def test_same_article_from_two_sources_appears_once(self):
         items = [{"url": "https://a", "image": None, "n": 1}, {"url": "https://a", "image": "https://i", "n": 2}]
