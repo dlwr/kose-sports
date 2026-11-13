@@ -1,5 +1,6 @@
 {
  "date": "2026-11-13",
+ "collected_at": "2026-11-13T17:32:28.451074+09:00",
  "club": {
   "record": "3勝3分10敗",
   "rank": 20,
@@ -17,64 +18,109 @@
   "closed": false,
   "links_only": false,
   "top": {
-   "headline": "最下位脱出へ 藤枝で勝ち点３を",
-   "body": "ヴァンフォーレ甲府は14日、明治安田Ｊ２第17節で藤枝ＭＹＦＣと敵地で対戦する。キックオフは午後2時。ここまで3勝3分10敗で20位と苦しい位置にいる。\n山梨日日新聞は「最下位脱出へ求められる勝ち点３」と伝えた。順位を上げるためにも、アウェーで白星をつかみたい一戦になる。",
+   "headline": "守護神ジョン、月間ベストセーブ賞",
+   "body": "東ジョン選手が10月度「２０２６／２７ 明治安田Ｊ２リーグ KONAMI 月間ベストセーブ賞」を受賞した。クラブが公式に発表した。\n\nチームは3勝3分10敗でJ2の20位と苦しい戦いが続く。そのなかで、ゴールを守る背番号の個人賞受賞は数少ない明るい話題だ。サポーターの掲示板にも祝福の書き込みが寄せられている。\n\n甲府は14日14時から、第17節で藤枝ＭＹＦＣとアウェイで対戦する。山梨日日新聞は最下位脱出へ勝点3が求められる一戦と伝えている。",
    "links": [
+    {
+     "title": "東ジョン選手 10月度「２０２６／２７ 明治安田Ｊ２リーグ KONAMI 月間ベストセーブ賞」受賞のお知らせ",
+     "url": "https://www.ventforet.jp/news/team/525716",
+     "source": "クラブ公式"
+    },
     {
      "title": "【ＶＦプレビュー 藤枝戦】最下位脱出へ 求められる勝ち点３",
      "url": "https://www.sannichi.co.jp/article/2026/11/12/80733422?g=co_l_main",
      "source": "山梨日日新聞"
     }
    ],
-   "image": null
+   "image": "https://cdn.www.ventforet.jp/uploads/1a837fe18b79d66a62add50d0a42bc40bb2fc690/top_flash_large.jpg?1794458715"
   },
-  "briefs": [],
+  "second": null,
+  "briefs": [
+   {
+    "headline": "山梨ラーメン祭に選手参加　サイン会＆トークショー",
+    "body": "クラブは「第17回山梨ラーメン祭」でのサイン会＆トークショーに選手が参加すると発表した。参加する選手など詳細はクラブ公式の案内を参照してほしい。",
+    "links": [
+     {
+      "title": "「第17回山梨ラーメン祭」サイン会＆トークショーに選手参加のお知らせ",
+      "url": "https://www.ventforet.jp/news/other/525718",
+      "source": "クラブ公式"
+     }
+    ],
+    "image": "https://cdn.www.ventforet.jp/uploads/a1313271743b9ae275238ea58de6bc8fa70ed7fb/top_flash_large.jpg?1794534335"
+   },
+   {
+    "headline": "こども食堂のクリスマスまるしぇにマスコット参加",
+    "body": "クラブは「こども食堂X’masまるしぇ2026」にクラブマスコットが参加すると発表した。",
+    "links": [
+     {
+      "title": "「こども食堂X’masまるしぇ2026」クラブマスコット参加のお知らせ",
+      "url": "https://www.ventforet.jp/news/other/525717",
+      "source": "クラブ公式"
+     }
+    ],
+    "image": null
+   },
+   {
+    "headline": "J2順位、中下位は大混戦　15位以下は全て連敗中",
+    "body": "J2の最新順位では8位から14位までが勝点4差にひしめく。一方、15位以下の6クラブは全て連敗中で、20位の甲府もその中にいる。",
+    "links": [
+     {
+      "title": "J2最新順位、中下位の争いが熾烈に　8位から14位まで勝ち点4差、15位以下の6クラブは全て連敗中",
+      "url": "https://topics.smt.docomo.ne.jp/amp/article/footballchannel/sports/footballchannel-1057094",
+      "source": "ｄメニューニュース"
+     }
+    ],
+    "image": "https://img.topics.smt.news.goo.ne.jp/picture/footballchannel/m_footballchannel-1057094.jpg"
+   },
+   {
+    "headline": "藤枝戦へ山日がプレビュー　最下位脱出へ勝点3",
+    "body": "山梨日日新聞は12日、藤枝戦のプレビューを掲載し、最下位脱出へ勝点3が求められると伝えた。",
+    "links": [
+     {
+      "title": "【ＶＦプレビュー 藤枝戦】最下位脱出へ 求められる勝ち点３",
+      "url": "https://www.sannichi.co.jp/article/2026/11/12/80733422?g=co_l_main",
+      "source": "山梨日日新聞"
+     }
+    ],
+    "image": null
+   }
+  ],
   "rumors": [
    {
-    "headline": "外国籍2選手が練習参加か ベンカリファとナイジェリア人",
-    "body": "無所属の外国籍選手2人が練習に参加しているとの話が広がっている。30代半ばのナッシム・ベンカリファと、ナイジェリア出身のチュクウディの名前が挙がる。獲得に至るかどうかを含め、クラブからの発表はない。",
-    "origin": "超掲示板、5ch甲府スレの複数の書き込み",
+    "headline": "クラブ売却案件、徳島の名前も浮上",
+    "body": "仲介会社を通じて出回るJクラブの売却案件をめぐり、甲府ではなく徳島だとの書き込みが出ている。徳島が一番多い噂だとする声もある一方、売却案件の主は甲府が濃厚との見方も残る。買い手が仮に現れても、札幌のBGグループのように筆頭株主にはならないのではとの指摘もある。クラブからの発表はなく、案件の主は明らかになっていない。",
+    "origin": "5ch 甲府スレ",
     "confidence": 2,
     "links": [
      {
-      "title": "超掲示板 906764",
-      "url": "https://bm.best-hit.tv/ventforet/?anc=906764#anc",
-      "source": "超掲示板"
+      "title": "5ch 甲府スレ 273",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/273",
+      "source": "5ch 甲府スレ"
      },
      {
-      "title": "超掲示板 906727",
-      "url": "https://bm.best-hit.tv/ventforet/?anc=906727#anc",
-      "source": "超掲示板"
+      "title": "5ch 甲府スレ 275",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/275",
+      "source": "5ch 甲府スレ"
      },
      {
-      "title": "超掲示板 906622",
-      "url": "https://bm.best-hit.tv/ventforet/?anc=906622#anc",
-      "source": "超掲示板"
+      "title": "5ch 甲府スレ 271",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/271",
+      "source": "5ch 甲府スレ"
      },
      {
-      "title": "超掲示板 906649",
-      "url": "https://bm.best-hit.tv/ventforet/?anc=906649#anc",
-      "source": "超掲示板"
-     },
-     {
-      "title": "5ch 甲府スレ 261",
-      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/261",
+      "title": "5ch 甲府スレ 266",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/266",
       "source": "5ch 甲府スレ"
      }
     ],
     "image": null
    },
    {
-    "headline": "インドネシアのBAYANグループと連携か 現地でクリニックと選手選考会",
-    "body": "インドネシア事業のスポンサーBAYANグループが拠点を置くバリクパパンで、来年1月にサッカークリニックと日本に派遣する選手の選考会が行われるとの情報がある。派遣選手の年代など詳細は明らかになっていない。ペルシブとの関係を含め、協力の内容はクラブから示されていない。",
-    "origin": "超掲示板、5ch甲府スレの複数の書き込み（インドネシアの現地サイトの内容を紹介する形）",
+    "headline": "インドネシア事業、現地で1月にクリニックと選考会か",
+    "body": "インドネシア事業のスポンサーとされるBAYANグループが拠点を置く都市で、サッカークリニックと日本に派遣する選手の選考会を来年1月に開くとの情報が出ている。育成年代が対象とみられる。札幌とBGグループの関係のような形を想像する声や、現地企業への売却を期待する声もあるが、クラブからの発表はなく、詳細は明らかになっていない。",
+    "origin": "超掲示板",
     "confidence": 2,
     "links": [
-     {
-      "title": "5ch 甲府スレ 258",
-      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/258",
-      "source": "5ch 甲府スレ"
-     },
      {
       "title": "超掲示板 906810",
       "url": "https://bm.best-hit.tv/ventforet/?anc=906810#anc",
@@ -86,56 +132,22 @@
       "source": "超掲示板"
      },
      {
-      "title": "超掲示板 906701",
-      "url": "https://bm.best-hit.tv/ventforet/?anc=906701#anc",
-      "source": "超掲示板"
-     },
-     {
-      "title": "超掲示板 906688",
-      "url": "https://bm.best-hit.tv/ventforet/?anc=906688#anc",
-      "source": "超掲示板"
-     }
-    ],
-    "image": null
-   },
-   {
-    "headline": "インドネシア企業への売却・資本参加説 冬の大型補強を期待する声",
-    "body": "インドネシアの企業への売却や資本参加の話があるとの見方が、掲示板で語られている。話が進めば冬に大型補強があるのではと期待する声もある一方、クラブからの発表はなく、実際に進んでいるかは分からない。",
-    "origin": "超掲示板、5ch甲府スレの複数の書き込み",
-    "confidence": 2,
-    "links": [
-     {
-      "title": "超掲示板 906748",
-      "url": "https://bm.best-hit.tv/ventforet/?anc=906748#anc",
-      "source": "超掲示板"
-     },
-     {
       "title": "超掲示板 906817",
       "url": "https://bm.best-hit.tv/ventforet/?anc=906817#anc",
       "source": "超掲示板"
      },
      {
-      "title": "5ch 甲府スレ 266",
-      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/266",
-      "source": "5ch 甲府スレ"
-     },
-     {
-      "title": "超掲示板 906750",
-      "url": "https://bm.best-hit.tv/ventforet/?anc=906750#anc",
-      "source": "超掲示板"
-     },
-     {
-      "title": "超掲示板 906627",
-      "url": "https://bm.best-hit.tv/ventforet/?anc=906627#anc",
+      "title": "超掲示板 906748",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906748#anc",
       "source": "超掲示板"
      }
     ],
     "image": null
    },
    {
-    "headline": "藤枝戦の先発予想 遠藤ボランチ、メンデス先発、黒川と藤井の共演も",
-    "body": "山梨日日新聞の先発予想では、遠藤がボランチに入り、メンデスが先発、熊倉も起用されるとの見立てが掲示板で話題になっている。黒川と藤井が並ぶ可能性にも期待が寄せられている。実際のメンバーはクラブが発表するまで分からない。",
-    "origin": "超掲示板の複数の書き込み（山梨日日新聞の先発予想を紹介）",
+    "headline": "藤枝戦の先発予想、遠藤ボランチにメンデス先発",
+    "body": "山梨日日新聞の先発予想として、遠藤がボランチに入り、メンデスが先発、熊倉も起用される布陣が話題になっている。黒川と藤井が並ぶ攻撃陣への期待も大きい。ただしこの予想は外れることが多いとの声もある。クラブから先発メンバーの発表はない。",
+    "origin": "超掲示板",
     "confidence": 2,
     "links": [
      {
@@ -144,29 +156,82 @@
       "source": "超掲示板"
      },
      {
+      "title": "超掲示板 906834",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906834#anc",
+      "source": "超掲示板"
+     },
+     {
       "title": "超掲示板 906857",
       "url": "https://bm.best-hit.tv/ventforet/?anc=906857#anc",
       "source": "超掲示板"
      },
      {
-      "title": "超掲示板 906867",
-      "url": "https://bm.best-hit.tv/ventforet/?anc=906867#anc",
-      "source": "超掲示板"
-     },
-     {
-      "title": "超掲示板 906751",
-      "url": "https://bm.best-hit.tv/ventforet/?anc=906751#anc",
+      "title": "超掲示板 906889",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906889#anc",
       "source": "超掲示板"
      }
     ],
     "image": null
    },
    {
-    "headline": "中村TD「DFは意思疎通が必要で補強に慎重」 地元紙で語ったとの声",
-    "body": "中村TDが、ＤＦは意思疎通が必要なため補強には慎重だと語ったとする記事の内容が、掲示板で取り沙汰されている。また、獲得できるのは他クラブの若手の育成型レンタルか外国籍選手に限られるとの趣旨の発言があったとの書き込みもある。いずれも記事そのものは確認できていない。",
-    "origin": "超掲示板、5ch甲府スレの複数の書き込み（山梨日日新聞の記事を紹介）",
-    "confidence": 2,
+    "headline": "佐藤恵介、練習に復帰か",
+    "body": "右膝のけがで離脱していた佐藤恵介が練習に復帰しているのを見たとの書き込みが出た。クラブからの発表はなく、状態や復帰時期は明らかになっていない。",
+    "origin": "超掲示板",
+    "confidence": 1,
     "links": [
+     {
+      "title": "超掲示板 906765",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906765#anc",
+      "source": "超掲示板"
+     }
+    ],
+    "image": null
+   }
+  ],
+  "boards": [
+   {
+    "headline": "売却案件の「買い手」論議が中心に、新FW像にも注文",
+    "body": "前号は外国人選手の練習参加を歓迎する声が中心だったが、今回は売却案件が甲府か徳島かをめぐる議論が目立つ。降格後は買い叩かれるのではといった警戒や、買い手が見つかるのかという不安がにじむ。経営陣や監督への不満は引き続き強い。一方、補強では対人に強い前線の選手を求める声があり、ベンカリファについては30代中盤と稼働率を心配する書き込みもある。全体に重い空気が続いている。",
+    "board": "5ch 甲府スレ",
+    "links": [
+     {
+      "title": "5ch 甲府スレ 271",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/271",
+      "source": "5ch 甲府スレ"
+     },
+     {
+      "title": "5ch 甲府スレ 275",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/275",
+      "source": "5ch 甲府スレ"
+     },
+     {
+      "title": "5ch 甲府スレ 273",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/273",
+      "source": "5ch 甲府スレ"
+     },
+     {
+      "title": "5ch 甲府スレ 274",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/274",
+      "source": "5ch 甲府スレ"
+     },
+     {
+      "title": "5ch 甲府スレ 261",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/261",
+      "source": "5ch 甲府スレ"
+     }
+    ],
+    "image": null
+   },
+   {
+    "headline": "藤枝戦前日、先発予想に期待と不安　TD発言には批判",
+    "body": "前号の外国人練習参加一色から、藤枝戦へ話題が移った。山日の先発予想に期待する声が増え、遠征や観戦の予定を書き込む人もいる。一方、DF補強に慎重だとされる中村TDの発言には、失点の多さと照らして疑問や批判が相次いだ。ベテランの起用や編成の在り方、売却やインドネシア関連の議論も続く。東ジョンの月間ベストセーブ賞には祝福の声が上がった。切迫感と諦めが入り交じる空気は変わらない。",
+    "board": "超掲示板",
+    "links": [
+     {
+      "title": "超掲示板 906855",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906855#anc",
+      "source": "超掲示板"
+     },
      {
       "title": "超掲示板 906872",
       "url": "https://bm.best-hit.tv/ventforet/?anc=906872#anc",
@@ -183,156 +248,71 @@
       "source": "超掲示板"
      },
      {
-      "title": "5ch 甲府スレ 256",
-      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/256",
-      "source": "5ch 甲府スレ"
-     },
-     {
-      "title": "超掲示板 906853",
-      "url": "https://bm.best-hit.tv/ventforet/?anc=906853#anc",
-      "source": "超掲示板"
-     }
-    ],
-    "image": null
-   },
-   {
-    "headline": "内藤大和に他クラブが関心か 冬の移籍を気にする声",
-    "body": "得点源の内藤大和に他クラブから獲得前提の調査が届いているのではないか、との見方が掲示板で出ている。冬の移籍を心配する声が相次いでいるが、裏付けとなる発表や報道は出ていない。",
-    "origin": "超掲示板の複数の書き込み",
-    "confidence": 2,
-    "links": [
-     {
-      "title": "超掲示板 906654",
-      "url": "https://bm.best-hit.tv/ventforet/?anc=906654#anc",
-      "source": "超掲示板"
-     },
-     {
-      "title": "超掲示板 906800",
-      "url": "https://bm.best-hit.tv/ventforet/?anc=906800#anc",
-      "source": "超掲示板"
-     },
-     {
-      "title": "超掲示板 906797",
-      "url": "https://bm.best-hit.tv/ventforet/?anc=906797#anc",
-      "source": "超掲示板"
-     },
-     {
-      "title": "超掲示板 906653",
-      "url": "https://bm.best-hit.tv/ventforet/?anc=906653#anc",
-      "source": "超掲示板"
-     }
-    ],
-    "image": null
-   },
-   {
-    "headline": "福井、荒木、佐藤恵が練習に復帰か",
-    "body": "福井、荒木、佐藤恵の3選手が練習に復帰している姿が確認されたとの声が、掲示板に寄せられた。SNSの写真などが根拠とされるが、クラブからの発表はない。",
-    "origin": "超掲示板の書き込み（SNSの写真などを根拠とする目撃談）",
-    "confidence": 2,
-    "links": [
-     {
-      "title": "超掲示板 906629",
-      "url": "https://bm.best-hit.tv/ventforet/?anc=906629#anc",
-      "source": "超掲示板"
-     },
-     {
-      "title": "超掲示板 906765",
-      "url": "https://bm.best-hit.tv/ventforet/?anc=906765#anc",
-      "source": "超掲示板"
-     }
-    ],
-    "image": null
-   },
-   {
-    "headline": "チームへの作戦ボード寄付が話題に",
-    "body": "スポンサーからチームに作戦ボード（ホワイトボード）が寄付されたとの話が、掲示板で話題になっている。クラブからの詳しい発表は確認できていない。",
-    "origin": "5ch甲府スレ、超掲示板の書き込み",
-    "confidence": 2,
-    "links": [
-     {
-      "title": "5ch 甲府スレ 265",
-      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/265",
-      "source": "5ch 甲府スレ"
-     },
-     {
-      "title": "超掲示板 906706",
-      "url": "https://bm.best-hit.tv/ventforet/?anc=906706#anc",
+      "title": "超掲示板 906909",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=906909#anc",
       "source": "超掲示板"
      }
     ],
     "image": null
    }
   ],
-  "boards": [
+  "reads": [
    {
-    "headline": "5ch甲府スレ：インドネシア連携に期待と、クラブ改革を求める声",
-    "body": "スレではインドネシアのBAYANグループとの連携が中心の話題で、現地でのクリニックや選手選考会の情報が共有されている。札幌とBGグループの関係になぞらえ、出資の形を推測する声も出た。「市民クラブからの脱却を」「補強や編成のやり方を変える時だ」という意見が目立ち、FWの補強を望む声や新外国籍選手への関心も見られた。全体としては、不満と変化への期待が入り交じった空気だ。",
-    "board": "5ch 甲府スレ",
+    "headline": "低迷同士の「信頼残高」対決を組織論で読む",
+    "body": "ブログ「ヴァンフォーレ組織論」が、第17節の藤枝戦を前に、コンガー＆カヌンゴの「カリスマ的リーダーシップ」の理論で一戦を読み解くプレビューを公開した。「いつになったら勝てるんだ」という嘆きから書き出し、戦術ではなく組織論の視点で低迷する両チームを見つめている。",
     "links": [
      {
-      "title": "5ch 甲府スレ 256",
-      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/256",
-      "source": "5ch 甲府スレ"
-     },
-     {
-      "title": "5ch 甲府スレ 258",
-      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/258",
-      "source": "5ch 甲府スレ"
-     },
-     {
-      "title": "5ch 甲府スレ 266",
-      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/266",
-      "source": "5ch 甲府スレ"
-     },
-     {
-      "title": "5ch 甲府スレ 264",
-      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/264",
-      "source": "5ch 甲府スレ"
-     },
-     {
-      "title": "5ch 甲府スレ 259",
-      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/259",
-      "source": "5ch 甲府スレ"
+      "title": "沼から抜け出すのは、どっちだ——藤枝vs甲府、低迷同士の「信頼残高」対決",
+      "url": "https://note.com/happy_fish836/n/n4c1aef36af54",
+      "source": "ヴァンフォーレ組織論"
      }
     ],
-    "image": null
+    "image": "https://assets.st-note.com/production/uploads/images/335123847/rectangle_large_type_2_056f1d7f136b2edbe7bd69e735666079.png?width=800"
    },
    {
-    "headline": "超掲示板：藤枝戦を前に不満と一縷の期待が交錯",
-    "body": "最下位の現状に、監督や強化部の対応を厳しく問う書き込みが大半を占めた。ベンカリファらの練習参加については、遅すぎるとの不満がある一方、再生に期待する声も出ている。山梨日日新聞の先発予想を受けて「藤枝戦は期待できる」「一周回って楽しみ」と前向きな声も出ており、遠征の話題も上がった。全体には危機感と焦りが強いが、勝利を願うサポーターの熱も感じられる。",
-    "board": "超掲示板",
+    "headline": "5失点の先に何があるのか　仙台戦を考える",
+    "body": "「甲府を考える｜試合とデータ」は、仙台戦の1-5を今季3度目の5失点と位置づけた。直近の大分、今治、新潟戦では1失点に抑えていただけに期待があったとして、失点が続いた理由と、途中で流れを止められなかった理由を問い直している。",
     "links": [
      {
-      "title": "超掲示板 906855",
-      "url": "https://bm.best-hit.tv/ventforet/?anc=906855#anc",
-      "source": "超掲示板"
-     },
-     {
-      "title": "超掲示板 906861",
-      "url": "https://bm.best-hit.tv/ventforet/?anc=906861#anc",
-      "source": "超掲示板"
-     },
-     {
-      "title": "超掲示板 906764",
-      "url": "https://bm.best-hit.tv/ventforet/?anc=906764#anc",
-      "source": "超掲示板"
-     },
-     {
-      "title": "超掲示板 906816",
-      "url": "https://bm.best-hit.tv/ventforet/?anc=906816#anc",
-      "source": "超掲示板"
-     },
-     {
-      "title": "超掲示板 906825",
-      "url": "https://bm.best-hit.tv/ventforet/?anc=906825#anc",
-      "source": "超掲示板"
+      "title": "【甲府考察】5失点の先に何があるのか。仙台戦の敗戦と、見え始めた新たな動き",
+      "url": "https://note.com/kofu_match_lab/n/nfff6db939212",
+      "source": "甲府を考える｜試合とデータ"
      }
     ],
-    "image": null
+    "image": "https://assets.st-note.com/production/uploads/images/335615644/rectangle_large_type_2_081883ce7424c9af2c08a37b0c832b29.jpg?width=800"
    }
-  ]
+  ],
+  "editorial": "最下位の編集部にも、たまには明るい話題が舞い込むものだ。ジョンのセーブ賞にラーメン祭と、紙面だけは賑やかである。あとは明日の藤枝戦、勝点3を持ち帰ってもらえれば、編集部も祝杯をあげたい。"
  },
  "news": [
+  {
+   "source": "クラブ公式",
+   "title": "「第17回山梨ラーメン祭」サイン会＆トークショーに選手参加のお知らせ",
+   "url": "https://www.ventforet.jp/news/other/525718",
+   "published": "2026-11-13T23:59:00+09:00",
+   "image": "https://cdn.www.ventforet.jp/uploads/a1313271743b9ae275238ea58de6bc8fa70ed7fb/top_flash_large.jpg?1794534335"
+  },
+  {
+   "source": "クラブ公式",
+   "title": "「こども食堂X’masまるしぇ2026」クラブマスコット参加のお知らせ",
+   "url": "https://www.ventforet.jp/news/other/525717",
+   "published": "2026-11-13T23:59:00+09:00",
+   "image": null
+  },
+  {
+   "source": "クラブ公式",
+   "title": "東ジョン選手 10月度「２０２６／２７ 明治安田Ｊ２リーグ KONAMI 月間ベストセーブ賞」受賞のお知らせ",
+   "url": "https://www.ventforet.jp/news/team/525716",
+   "published": "2026-11-13T23:59:00+09:00",
+   "image": "https://cdn.www.ventforet.jp/uploads/1a837fe18b79d66a62add50d0a42bc40bb2fc690/top_flash_large.jpg?1794458715"
+  },
+  {
+   "source": "ｄメニューニュース",
+   "title": "J2最新順位、中下位の争いが熾烈に　8位から14位まで勝ち点4差、15位以下の6クラブは全て連敗中",
+   "url": "https://topics.smt.docomo.ne.jp/amp/article/footballchannel/sports/footballchannel-1057094",
+   "published": "2026-11-13T10:35:00+09:00",
+   "image": "https://img.topics.smt.news.goo.ne.jp/picture/footballchannel/m_footballchannel-1057094.jpg"
+  },
   {
    "source": "山梨日日新聞",
    "title": "【ＶＦプレビュー 藤枝戦】最下位脱出へ 求められる勝ち点３",
@@ -346,45 +326,8 @@
    "url": "https://www.goal.com/jp/%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9/j-league-ybc-levain-cup-2026-27-match-schedule-kickoff-times-tv-broadcast-and-live-streaming-information/bltc556b7b212f48d4d",
    "published": "2026-11-12T17:00:54+09:00",
    "image": "https://assets.goal.com/images/v3/getty-1372263500/crop/MM5DKMBQGQ5DEOBRGU5G433XMU5DAORSGYYQ====/GettyImages-1372263500.jpg"
-  },
-  {
-   "source": "フットボールチャンネル",
-   "title": "鹿島アントラーズ｜順位・順位推移・試合日程・結果【2026/27】",
-   "url": "https://www.footballchannel.jp/2026/11/12/post991935/",
-   "published": "2026-11-12T13:45:00+09:00",
-   "image": "https://www.footballchannel.jp/wordpress/assets/2025/11/20251126_kashima.jpg"
-  },
-  {
-   "source": "Dellows News",
-   "title": "スポGOMIワールドカップ福島STAGE開催 SDジジーズが優勝し日本STAGEへ",
-   "url": "https://news.dellows.jp/1152291/",
-   "published": "2026-11-12T12:00:00+09:00",
-   "image": "https://news.dellows.jp/wp-content/uploads/2026/11/1152291_1.jpg"
-  },
-  {
-   "source": "ｄメニューニュース",
-   "title": "J2最新順位、首位新潟から5位大宮まで勝ち点2差の大混戦　横浜FCが4発快勝で2位浮上、富山は3連勝も3位後退　次節は直接対決も",
-   "url": "https://topics.smt.docomo.ne.jp/amp/article/footballchannel/sports/footballchannel-1056788",
-   "published": "2026-11-12T11:20:00+09:00",
-   "image": "https://img.topics.smt.news.goo.ne.jp/picture/footballchannel/m_footballchannel-1056788.jpg"
   }
  ],
  "videos": [],
- "notes": [
-  {
-   "source": "BEYOND THE SCORE",
-   "title": "「解任」の2文字が点滅し始めた。声明から2日で5失点――J2最下位・甲府、降格確率83.6%の危機【BEYOND THE SCORE】",
-   "url": "https://note.com/beyondthescore/n/n6092b45a4b60",
-   "published": "2026-11-13T01:50:57+09:00",
-   "image": null
-  },
-  {
-   "source": "ヴァンフォーレ組織論",
-   "title": "沼から抜け出すのは、どっちだ——藤枝vs甲府、低迷同士の「信頼残高」対決",
-   "url": "https://note.com/happy_fish836/n/n4c1aef36af54",
-   "published": "2026-11-12T17:27:05+09:00",
-   "image": "https://assets.st-note.com/production/uploads/images/335123847/rectangle_large_type_2_056f1d7f136b2edbe7bd69e735666079.png?width=800"
-  }
- ],
  "failures": []
 }
