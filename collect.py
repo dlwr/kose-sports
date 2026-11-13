@@ -7,11 +7,14 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from html import unescape
-from urllib.parse import quote, urlencode
+from urllib.parse import quote, urlencode, urlparse
 
 JST = timezone(timedelta(hours=9))
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
 WINDOW = timedelta(hours=26)
+READS_WINDOW = timedelta(days=7)
+SINCE_LIMIT = timedelta(days=3)
+EXCERPT = 400
 ATTEMPTS = 3
 CHO_MAX_PAGES = 60
 KOFU = re.compile("甲府|ヴァンフォーレ|ＶＦ")
@@ -29,6 +32,12 @@ GNEWS_SANNICHI_URL = "https://news.google.com/rss/search?q=site:sannichi.co.jp+"
 HOCHI_URL = "https://hochi.news/search?q=" + quote("甲府")
 YOUTUBE_URL = "https://www.youtube.com/feeds/videos.xml?channel_id=UCtdA3-T8-1wLltOxVGuXyDg"
 NOTE_URL = "https://note.com/hashtag/" + quote(CLUB) + "/rss"
+BLOG_FEEDS = [
+    "https://ityariba.com/feed/",
+    "https://k1968k.blog106.fc2.com/?xml",
+    "https://lissele12.hatenablog.com/rss",
+    "https://wccf-yonecchi.jugem.jp/?mode=rss",
+]
 BBS = "https://kizuna.5ch.io"
 SUBJECT_URL = BBS + "/soccer/subject.txt"
 THREAD_URL = BBS + "/test/read.cgi/soccer/{}/"
@@ -155,15 +164,39 @@ def parse_youtube(xml):
 
 def parse_note(xml):
     return [
-        item(
-            e.findtext("note:creatorName", namespaces=NS) or "note",
-            e.findtext("title"),
-            e.findtext("link"),
-            parsedate_to_datetime(e.findtext("pubDate")).astimezone(JST).isoformat(),
-            e.findtext("media:thumbnail", namespaces=NS),
-        )
+        {
+            **item(
+                e.findtext("note:creatorName", namespaces=NS) or "note",
+                e.findtext("title"),
+                e.findtext("link"),
+                parsedate_to_datetime(e.findtext("pubDate")).astimezone(JST).isoformat(),
+                e.findtext("media:thumbnail", namespaces=NS),
+            ),
+            "excerpt": text_of(e.findtext("description") or "")[:EXCERPT],
+        }
         for e in ET.fromstring(xml).iter("item")
     ]
+
+
+def parse_blog(xml):
+    def local(e):
+        return e.tag.split("}")[-1]
+
+    root = ET.fromstring(xml)
+    blog = next(e.text for e in root.iter() if local(e) == "title")
+    items = []
+    for e in root.iter():
+        if local(e) != "item":
+            continue
+        field = {local(c): c.text or "" for c in e}
+        body = text_of(field.get("encoded") or field.get("description", ""))
+        if not KOFU.search(field["title"] + body):
+            continue
+        when = parsedate_to_datetime(field["pubDate"]) if "pubDate" in field else datetime.fromisoformat(field["date"])
+        items.append(
+            {**item(blog, field["title"], field["link"], when.astimezone(JST).isoformat()), "excerpt": body[:EXCERPT]}
+        )
+    return items
 
 
 def parse_subject(txt):
@@ -254,11 +287,13 @@ def parse_players(html):
     return [n.replace(" ", "") for n in re.findall(r'o-table__player-name-link"[^>]*>([^<]+)<', html)]
 
 
-def collect(now, fetch=fetch, sleep=time.sleep):
+def collect(now, fetch=fetch, sleep=time.sleep, since=None):
     cutoff = (now - WINDOW).isoformat()
+    # 超掲示板の時刻は分までしかないので、前号と同じ分の投稿は落とさない
+    board_cutoff = since[:16] if since and since >= (now - SINCE_LIMIT).isoformat() else cutoff
     failures = []
 
-    def recent(items):
+    def recent(items, cutoff=cutoff):
         return sorted((i for i in items if i["published"] >= cutoff), key=lambda i: i["published"], reverse=True)
 
     def attempt(label, fn, default):
@@ -297,7 +332,15 @@ def collect(now, fetch=fetch, sleep=time.sleep):
 
     news = unique(enrich(n) for n in recent(news))
     videos = attempt("YouTube", lambda: parse_youtube(fetch(YOUTUBE_URL)), [])
-    notes = attempt("note", lambda: parse_note(fetch(NOTE_URL)), [])
+    reads = attempt("note", lambda: parse_note(fetch(NOTE_URL)), [])
+    for feed in BLOG_FEEDS:
+        reads += attempt(urlparse(feed).hostname, lambda: parse_blog(fetch(feed)), [])
+    reads = recent(reads, (now - READS_WINDOW).isoformat())
+    for r in reads:
+        try:
+            r["image"] = r["image"] or parse_og_image(fetch(r["url"]))
+        except Exception as e:
+            print(f"no photo for {r['title'][:20]}: {e!r}"[:200], file=sys.stderr)
 
     def club():
         return {**parse_schedule(fetch(SCHEDULE_URL), now), "players": parse_players(fetch(PLAYERS_URL))}
@@ -319,7 +362,7 @@ def collect(now, fetch=fetch, sleep=time.sleep):
             found = parse_cho(fetch(f"{CHO_URL}?page={page}", "cp932"))
             fresh = [p for p in found if p["no"] not in posts]
             posts.update((p["no"], p) for p in fresh)
-            if not fresh or any(p["published"] < cutoff for p in found):
+            if not fresh or any(p["published"] < board_cutoff for p in found):
                 break
             sleep(1)
         return list(posts.values())
@@ -330,8 +373,8 @@ def collect(now, fetch=fetch, sleep=time.sleep):
     return {
         "news": recent(news),
         "videos": recent(videos),
-        "notes": recent(notes),
-        "boards": {name: recent(posts) for name, posts in boards.items()},
+        "reads": reads,
+        "boards": {name: recent(posts, board_cutoff) for name, posts in boards.items()},
         "club": club,
         "failures": failures,
     }
