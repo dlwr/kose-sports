@@ -74,10 +74,12 @@ def top(t):
     )
 
 
-def brief(t):
+def brief(t, kind=""):
+    if not t:
+        return ""
     thumb = f'<div class="thumb">{picture}</div>' if (picture := img(t["image"])) else ""
     return (
-        f'<article class="item"><h3>{escape(t["headline"])}</h3>{thumb}'
+        f'<article class="item{kind and " " + kind}"><h3>{escape(t["headline"])}</h3>{thumb}'
         f'<div class="body">{paragraphs(t["body"])}</div>{sources(t["links"])}</article>'
     )
 
@@ -138,8 +140,12 @@ def render_issue(issue, prev=None, next=None):
         news = section("ニュース", many(brief, g["briefs"]) or (many(media, issue["news"]) if g["links_only"] else ""))
         rumors = section("噂", many(rumor, g["rumors"]), "is-rumor")
         ordered = [news, rumors] if issue["club"].get("next") else [rumors, news]
-        main = top(g["top"]) + "".join(ordered) + section("掲示板", many(board, g["boards"]), "is-board")
-    main += section("動画", many(media, issue["videos"])) + section("サポーターの note", many(media, issue["notes"]))
+        reads = section("サポーターのブログ・note", many(brief, g.get("reads", [])))
+        boards = section("掲示板", many(board, g["boards"]), "is-board")
+        main = top(g["top"]) + brief(g.get("second"), "second") + "".join(ordered) + reads + boards
+    main += section("動画", many(media, issue["videos"])) + section("サポーターの note", many(media, issue.get("notes", [])))
+    if words := paragraphs(g.get("editorial", "")):
+        main += section("編集後記", f'<div class="item"><div class="body">{words}</div></div>')
     body = f'{masthead(issue)}<main class="sheet">{main}{footer(issue, prev, next)}</main>'
     title = f"小瀬スポーツ {issue['date']}"
     return TEMPLATE.replace("<!--title-->", title).replace("<!--body-->", body)
