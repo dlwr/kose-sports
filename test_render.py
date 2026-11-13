@@ -113,6 +113,37 @@ class RenderTest(unittest.TestCase):
         note = {"source": "甲府サポ", "title": "観戦記", "url": "https://note.com/x", "published": "2026-11-11T19:00:00+09:00", "image": None}
         self.assertIn("観戦記", html(notes=[note]))
 
+    def test_issue_without_notes_renders(self):
+        page = render.render_issue({k: v for k, v in issue().items() if k != "notes"})
+        self.assertIn("トップ見出し", page)
+
+    def test_second_headline(self):
+        self.assertIn("<h3>準一面の見出し</h3>", html(digest={"second": topic("準一面の見出し")}))
+
+    def test_second_comes_right_after_top(self):
+        page = html(digest={"second": topic("準一面の見出し"), "briefs": [topic("短信A")]})
+        self.assertLess(page.index("準一面の見出し"), page.index("短信A"))
+
+    def test_no_second_block_without_second(self):
+        self.assertNotIn('class="item second"', html())
+
+    def test_reads_section(self):
+        self.assertIn("サポーターのブログ・note", html(digest={"reads": [topic("読み物の見出し")]}))
+
+    def test_read_shows_its_picture(self):
+        page = html(digest={"reads": [topic("読み物の見出し", image="https://img/read.jpg")]})
+        self.assertIn('src="https://img/read.jpg"', page)
+
+    def test_reads_come_before_boards(self):
+        page = html(digest={"reads": [topic("読み物の見出し")], "boards": [topic("荒れ模様", board="超掲示板")]})
+        self.assertLess(page.index("読み物の見出し"), page.index("荒れ模様"))
+
+    def test_editorial(self):
+        self.assertIn("<p>今日も最下位。</p>", html(digest={"editorial": "今日も最下位。"}))
+
+    def test_no_editorial_heading_without_editorial(self):
+        self.assertNotIn("編集後記", html(digest={"editorial": ""}))
+
     def test_closed_issue(self):
         self.assertIn("本日休刊", html(digest={"closed": True, "top": None}))
 
