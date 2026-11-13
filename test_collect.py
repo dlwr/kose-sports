@@ -1,5 +1,6 @@
 import unittest
-from datetime import datetime
+from datetime import datetime, timedelta
+from unittest import mock
 
 import collect
 from collect import JST
@@ -47,7 +48,21 @@ YOUTUBE = """<feed xmlns:yt="http://www.youtube.com/xml/schemas/2015" xmlns="htt
 NOTE = """<rss xmlns:note="https://note.com" xmlns:media="http://search.yahoo.com/mrss/"><channel>
 <item><title>仙台戦の感想</title><media:thumbnail>https://assets.st-note.com/t.jpg</media:thumbnail>
 <note:creatorName>甲府サポ</note:creatorName><pubDate>Wed, 11 Nov 2026 19:42:10 +0900</pubDate>
-<link>https://note.com/a/n/n1</link></item></channel></rss>"""
+<link>https://note.com/a/n/n1</link>
+<description><![CDATA[<p>仙台戦を振り返る。</p><a href="https://note.com/a/n/n1">続きをみる</a>]]></description></item></channel></rss>"""
+
+BLOG_RSS = """<rss xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>データで見るJ</title>
+<item><title>J2下位はなぜ勝てないのか</title><link>https://blog.example/kofu</link>
+<pubDate>Wed, 11 Nov 2026 16:20:04 +0000</pubDate><description>短い要約</description>
+<content:encoded><![CDATA[<p>甲府の失点を数える。</p>]]></content:encoded></item>
+<item><title>札幌の6連勝</title><link>https://blog.example/sapporo</link>
+<pubDate>Wed, 11 Nov 2026 10:00:00 +0000</pubDate><description>札幌の話</description></item></channel></rss>"""
+
+BLOG_RDF = """<rdf:RDF xmlns="http://purl.org/rss/1.0/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>小瀬日記</title></channel>
+<item><title>ヴァンフォーレの藤枝戦</title><link>https://diary.example/1</link><description>行ってきた</description>
+<dc:date>2026-11-09T06:00:00+09:00</dc:date></item></rdf:RDF>"""
+BLOG_ARTICLE = '<html><head><meta property="og:image" content="https://blog.example/img/kofu.jpg"></head></html>'
 
 SUBJECT = """1794368995.dat<>移籍・レンタル・戦力外「ら」スレ Part17978 (461)
 1793848769.dat<>ヴァンフォーレ甲府 ☆ 遂にJ1復帰!!1076 (246)
@@ -137,6 +152,31 @@ class ParseNewsTest(unittest.TestCase):
 
     def test_note_image(self):
         self.assertEqual(collect.parse_note(NOTE)[0]["image"], "https://assets.st-note.com/t.jpg")
+
+    def test_note_excerpt_is_plain_text(self):
+        self.assertEqual(collect.parse_note(NOTE)[0]["excerpt"], "仙台戦を振り返る。 続きをみる")
+
+    def test_excerpt_is_capped(self):
+        long = NOTE.replace("仙台戦を振り返る。", "あ" * 1000)
+        self.assertEqual(len(collect.parse_note(long)[0]["excerpt"]), collect.EXCERPT)
+
+    def test_blog_source_is_blog_title(self):
+        self.assertEqual(collect.parse_blog(BLOG_RSS)[0]["source"], "データで見るJ")
+
+    def test_blog_posts_not_mentioning_kofu_are_dropped(self):
+        self.assertEqual([i["url"] for i in collect.parse_blog(BLOG_RSS)], ["https://blog.example/kofu"])
+
+    def test_blog_excerpt_comes_from_full_content(self):
+        self.assertEqual(collect.parse_blog(BLOG_RSS)[0]["excerpt"], "甲府の失点を数える。")
+
+    def test_blog_published_in_jst(self):
+        self.assertEqual(collect.parse_blog(BLOG_RSS)[0]["published"], "2026-11-12T01:20:04+09:00")
+
+    def test_rdf_blog_published(self):
+        self.assertEqual(collect.parse_blog(BLOG_RDF)[0]["published"], "2026-11-09T06:00:00+09:00")
+
+    def test_rdf_blog_excerpt_falls_back_to_description(self):
+        self.assertEqual(collect.parse_blog(BLOG_RDF)[0]["excerpt"], "行ってきた")
 
 
 class GnewsRedirectTest(unittest.TestCase):
@@ -259,6 +299,8 @@ class CollectTest(unittest.TestCase):
             "hochi": HOCHI,
             "youtube": YOUTUBE,
             "note.com": NOTE,
+            "blog.example/feed": BLOG_RSS,
+            "blog.example": BLOG_ARTICLE,
             "subject.txt": SUBJECT,
             "read.cgi": THREAD,
             "best-hit": CHO,
@@ -274,9 +316,15 @@ class CollectTest(unittest.TestCase):
 
     def setUp(self):
         self.broken = set()
+        feeds = mock.patch.object(collect, "BLOG_FEEDS", ["https://blog.example/feed"])
+        feeds.start()
+        self.addCleanup(feeds.stop)
 
-    def run_collect(self):
-        return collect.collect(NOW, self.fetch, sleep=lambda s: None)
+    def run_collect(self, now=NOW, since=None):
+        return collect.collect(now, self.fetch, sleep=lambda s: None, since=since)
+
+    def reads(self, **kwargs):
+        return {r["title"]: r for r in self.run_collect(**kwargs)["reads"]}
 
     def test_news_older_than_window_is_dropped(self):
         titles = [n["title"] for n in self.run_collect()["news"]]
@@ -324,6 +372,40 @@ class CollectTest(unittest.TestCase):
 
     def test_cho_posts(self):
         self.assertEqual([p["no"] for p in self.run_collect()["boards"]["cho"]], [906571])
+
+    def board(self, since, name="kofu5ch"):
+        return [p["no"] for p in self.run_collect(since=since)["boards"][name]]
+
+    def test_board_posts_before_previous_issue_are_dropped(self):
+        self.assertEqual(self.board("2026-11-11T12:00:00+09:00"), [])
+
+    def test_board_posts_since_previous_issue_reach_past_the_window(self):
+        self.assertEqual(self.board("2026-11-10T06:00:00+09:00"), [2, 1])
+
+    def test_previous_issue_older_than_three_days_is_ignored(self):
+        self.assertEqual(self.board("2026-11-08T06:00:00+09:00"), [2])
+
+    def test_post_in_the_minute_of_previous_issue_is_kept(self):
+        self.assertEqual(self.board("2026-11-11T22:24:30+09:00", "cho"), [906571])
+
+    def test_reads_include_note(self):
+        self.assertIn("仙台戦の感想", self.reads())
+
+    def test_reads_include_blog_post(self):
+        self.assertIn("J2下位はなぜ勝てないのか", self.reads())
+
+    def test_read_older_than_news_window_is_kept(self):
+        self.assertIn("仙台戦の感想", self.reads(now=NOW + timedelta(days=3)))
+
+    def test_read_older_than_a_week_is_dropped(self):
+        self.assertEqual(self.reads(now=NOW + timedelta(days=8)), {})
+
+    def test_blog_post_gets_article_image(self):
+        self.assertEqual(self.reads()["J2下位はなぜ勝てないのか"]["image"], "https://blog.example/img/kofu.jpg")
+
+    def test_broken_blog_feed_is_reported_by_host(self):
+        self.broken = {"blog.example/feed"}
+        self.assertEqual(self.run_collect()["failures"], ["blog.example"])
 
     def test_club(self):
         self.assertEqual(self.run_collect()["club"]["rank"], 20)
