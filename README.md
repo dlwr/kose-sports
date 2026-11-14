@@ -6,6 +6,6 @@ GitHub Actions が毎朝 `build.py` を動かし、収集 → Claude で紙面�
 
 ```
 python -m unittest
-python build.py                # 収集して今日の号を作る（ANTHROPIC_API_KEY が必要。無ければ見出しのみの号になる）
+python build.py                # 収集して今日の号を作る（ANTHROPIC_API_KEY が必要。無ければ見出しのみの号になる。YOUTUBE_API_KEY が無ければ動画は載らない）
 python build.py --render-only  # data/ から dist/ を作り直すだけ
 ```
