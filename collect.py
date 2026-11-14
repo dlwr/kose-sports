@@ -1,4 +1,5 @@
 import json
+import os
 import re
 import sys
 import time
@@ -30,7 +31,8 @@ OFFICIAL_URL = "https://www.ventforet.jp/news/all"
 # さんにちEye はデータセンターの IP に空の応答を返すので、Google ニュースの索引から拾う
 GNEWS_SANNICHI_URL = "https://news.google.com/rss/search?q=site:sannichi.co.jp+" + quote("ＶＦ甲府") + "+when:2d&hl=ja&gl=JP&ceid=JP:ja"
 HOCHI_URL = "https://hochi.news/search?q=" + quote("甲府")
-YOUTUBE_URL = "https://www.youtube.com/feeds/videos.xml?channel_id=UCtdA3-T8-1wLltOxVGuXyDg"
+# チャンネル ID の UC を UU に替えると全アップロードのプレイリストになる。RSS は GitHub Actions から 404 になる
+YOUTUBE_URL = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet,contentDetails&maxResults=15&playlistId=UUtdA3-T8-1wLltOxVGuXyDg"
 NOTE_URL = "https://note.com/hashtag/" + quote(CLUB) + "/rss"
 BLOG_FEEDS = [
     "https://ityariba.com/feed/",
@@ -47,14 +49,13 @@ PLAYERS_URL = "https://www.jleague.jp/club/kofu/player/"
 
 NS = {
     "a": "http://www.w3.org/2005/Atom",
-    "yt": "http://www.youtube.com/xml/schemas/2015",
     "note": "https://note.com",
     "media": "http://search.yahoo.com/mrss/",
 }
 
 
-def fetch(url, encoding="utf-8", data=None, urlopen=urllib.request.urlopen, sleep=time.sleep):
-    req = urllib.request.Request(url, data=data and data.encode(), headers={"User-Agent": UA})
+def fetch(url, encoding="utf-8", data=None, headers=None, urlopen=urllib.request.urlopen, sleep=time.sleep):
+    req = urllib.request.Request(url, data=data and data.encode(), headers={"User-Agent": UA, **(headers or {})})
     for left in reversed(range(ATTEMPTS)):
         try:
             with urlopen(req, timeout=30) as res:
@@ -150,17 +151,20 @@ def parse_hochi(html):
     return items
 
 
-def parse_youtube(xml):
+def parse_youtube(body):
     items = []
-    for e in ET.fromstring(xml).findall("a:entry", NS):
-        vid = e.findtext("yt:videoId", namespaces=NS)
-        published = datetime.fromisoformat(e.findtext("a:published", namespaces=NS)).astimezone(JST).isoformat()
+    for i in json.loads(body)["items"]:
+        details = i["contentDetails"]
+        # 非公開・削除済みの動画には videoPublishedAt が無い
+        if "videoPublishedAt" not in details:
+            continue
+        vid = details["videoId"]
         items.append(
             item(
                 "公式 YouTube",
-                e.findtext("a:title", namespaces=NS),
+                i["snippet"]["title"],
                 f"https://www.youtube.com/watch?v={vid}",
-                published,
+                datetime.fromisoformat(details["videoPublishedAt"]).astimezone(JST).isoformat(),
                 f"https://i.ytimg.com/vi/{vid}/mqdefault.jpg",
             )
         )
@@ -339,7 +343,8 @@ def collect(now, fetch=fetch, sleep=time.sleep, since=None):
         return n
 
     news = unique(enrich(n) for n in recent(news))
-    videos = attempt("YouTube", lambda: parse_youtube(fetch(YOUTUBE_URL)), [])
+    key = {"X-Goog-Api-Key": os.environ.get("YOUTUBE_API_KEY", "")}
+    videos = attempt("YouTube", lambda: parse_youtube(fetch(YOUTUBE_URL, headers=key)), [])
     reads = attempt("note", lambda: parse_note(fetch(NOTE_URL)), [])
     for feed in BLOG_FEEDS:
         reads += attempt(urlparse(feed).hostname, lambda: parse_blog(fetch(feed)), [])

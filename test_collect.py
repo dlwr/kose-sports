@@ -1,3 +1,5 @@
+import json
+import os
 import unittest
 from datetime import datetime, timedelta
 from unittest import mock
@@ -46,8 +48,14 @@ HOCHI = """<ul><li class="article-list__item"> <a href="/articles/20261109-OHT1T
 <img src="data:image/gif;base64,R0" data-src="https://hochi.news/images/b.jpg" alt="x">
 <h3 class="article-list__title">【甲府】渋谷監督「前を向く」</h3> <time class="article-list__date">2026年11月10日 08:30</time> </a> </li></ul>"""
 
-YOUTUBE = """<feed xmlns:yt="http://www.youtube.com/xml/schemas/2015" xmlns="http://www.w3.org/2005/Atom">
-<entry><yt:videoId>abc123</yt:videoId><title>ハイライト</title><published>2026-11-10T09:00:00+00:00</published></entry></feed>"""
+YOUTUBE = json.dumps(
+    {
+        "items": [
+            {"snippet": {"title": "ハイライト"}, "contentDetails": {"videoId": "abc123", "videoPublishedAt": "2026-11-11T09:00:00Z"}},
+            {"snippet": {"title": "Private video"}, "contentDetails": {"videoId": "zzz999"}},
+        ]
+    }
+)
 
 NOTE = """<rss xmlns:note="https://note.com" xmlns:media="http://search.yahoo.com/mrss/"><channel>
 <item><title>仙台戦の感想</title><media:thumbnail>https://assets.st-note.com/t.jpg</media:thumbnail>
@@ -156,6 +164,12 @@ class ParseNewsTest(unittest.TestCase):
 
     def test_youtube_image(self):
         self.assertEqual(collect.parse_youtube(YOUTUBE)[0]["image"], "https://i.ytimg.com/vi/abc123/mqdefault.jpg")
+
+    def test_youtube_published_in_jst(self):
+        self.assertEqual(collect.parse_youtube(YOUTUBE)[0]["published"], "2026-11-11T18:00:00+09:00")
+
+    def test_youtube_skips_unpublished_video(self):
+        self.assertEqual([v["title"] for v in collect.parse_youtube(YOUTUBE)], ["ハイライト"])
 
     def test_note_author(self):
         self.assertEqual(collect.parse_note(NOTE)[0]["source"], "甲府サポ")
@@ -298,7 +312,8 @@ class ParseClubTest(unittest.TestCase):
 
 
 class CollectTest(unittest.TestCase):
-    def fetch(self, url, encoding="utf-8", data=None):
+    def fetch(self, url, encoding="utf-8", data=None, headers=None):
+        self.headers[url] = headers
         pages = {
             "rss/articles": REDIRECT_PAGE,
             "batchexecute": REDIRECT_ANSWER,
@@ -328,6 +343,7 @@ class CollectTest(unittest.TestCase):
 
     def setUp(self):
         self.broken = set()
+        self.headers = {}
         feeds = mock.patch.object(collect, "BLOG_FEEDS", ["https://blog.example/feed"])
         feeds.start()
         self.addCleanup(feeds.stop)
@@ -337,6 +353,19 @@ class CollectTest(unittest.TestCase):
 
     def reads(self, **kwargs):
         return {r["title"]: r for r in self.run_collect(**kwargs)["reads"]}
+
+    def test_videos_come_from_uploads_playlist(self):
+        with mock.patch.dict(os.environ, {"YOUTUBE_API_KEY": "k"}):
+            self.run_collect()
+        self.assertIn("playlistId=UUtdA3-T8-1wLltOxVGuXyDg", next(u for u in self.headers if "youtube" in u))
+
+    def test_videos_request_carries_api_key(self):
+        with mock.patch.dict(os.environ, {"YOUTUBE_API_KEY": "k"}):
+            self.run_collect()
+        self.assertEqual(next(h for u, h in self.headers.items() if "youtube" in u), {"X-Goog-Api-Key": "k"})
+
+    def test_videos_inside_window_are_kept(self):
+        self.assertEqual([v["title"] for v in self.run_collect()["videos"]], ["ハイライト"])
 
     def test_news_older_than_window_is_dropped(self):
         titles = [n["title"] for n in self.run_collect()["news"]]
