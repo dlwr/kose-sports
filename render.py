@@ -58,7 +58,7 @@ def masthead(issue):
     score = f'<div class="score"><div class="score-in">{"".join(parts)}</div></div>' if parts else ""
     return (
         '<header><div class="mast"><div class="mast-in"><div><p class="mast-sub">ヴァンフォーレ甲府専門</p>'
-        '<h1><a href="./">小瀬スポーツ</a></h1></div>'
+        '<h1><a href="./">日刊小瀬スポーツ</a></h1></div>'
         f'<p class="mast-date">{d.year}年{d.month}月{d.day}日（{WEEKDAYS[d.weekday()]}）</p></div></div>{score}</header>'
     )
 
@@ -127,7 +127,7 @@ def footer(issue, prev, next):
         f'<footer class="foot"><nav class="pager">{older}{newer}</nav>'
         + "".join(f"<p>{n}</p>" for n in notes)
         + f"<p>掲示板: {boards}</p>"
-        "<p>小瀬スポーツは個人が作る非公式の読み物です。記事と写真の権利は各配信元にあります。"
+        "<p>日刊小瀬スポーツは個人が作る非公式の読み物です。記事と写真の権利は各配信元にあります。"
         "「噂」「掲示板」には裏の取れていない話が含まれます。</p></footer>"
     )
 
@@ -147,5 +147,5 @@ def render_issue(issue, prev=None, next=None):
     if words := paragraphs(g.get("editorial", "")):
         main += section("編集後記", f'<div class="item"><div class="body">{words}</div></div>')
     body = f'{masthead(issue)}<main class="sheet">{main}{footer(issue, prev, next)}</main>'
-    title = f"小瀬スポーツ {issue['date']}"
+    title = f"日刊小瀬スポーツ {issue['date']}"
     return TEMPLATE.replace("<!--title-->", title).replace("<!--body-->", body)

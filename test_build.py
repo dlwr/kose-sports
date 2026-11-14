@@ -144,7 +144,7 @@ class BuildTest(unittest.TestCase):
         for day in ("2026-11-10", "2026-11-12", "2026-11-11"):
             self.save(stored(day))
         build.build_site(self.data, self.dist)
-        self.assertIn("小瀬スポーツ 2026-11-12", (self.dist / "index.html").read_text())
+        self.assertIn("日刊小瀬スポーツ 2026-11-12", (self.dist / "index.html").read_text())
 
     def test_pages_link_to_neighbours(self):
         for day in ("2026-11-10", "2026-11-11", "2026-11-12"):
