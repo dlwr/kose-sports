@@ -4,6 +4,7 @@ on:
   push:
     branches: [main]
   pull_request:
+  # 6:00 JST の起動は Cloudflare Worker (trigger.js) が行う。これは数時間遅れて届く予備
   schedule:
     - cron: "0 21 * * *"
   workflow_dispatch:
@@ -30,11 +31,16 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: |
+          today=$(TZ=Asia/Tokyo date +%F)
+          if [ "${{ github.event_name }}" = schedule ] && [ -f "data/$today.json" ]; then
+            python build.py --render-only
+            exit 0
+          fi
           python build.py
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data
-          git commit -m "$(TZ=Asia/Tokyo date +%F) 号" || true
+          git commit -m "$today 号" || true
           git push
       - if: github.event_name != 'schedule' && github.event_name != 'workflow_dispatch'
         run: python build.py --render-only
