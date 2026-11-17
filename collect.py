@@ -247,7 +247,7 @@ def parse_cho(html):
         no = re.search(r"No\.(\d+)", body).group(1)
         content = re.search(r'<div class="post__body">(.*?)<footer', body, re.S).group(1)
         posts.append(
-            {"no": int(no), "published": iso(*when.groups()), "text": text_of(content), "url": f"{CHO_URL}?anc={no}#anc"}
+            {"no": int(no), "published": iso(*when.groups()), "text": text_of(content), "url": f"{CHO_URL}comment.php?log_id={no}"}
         )
     return posts
 

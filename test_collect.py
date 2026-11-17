@@ -257,7 +257,7 @@ class ParseBoardsTest(unittest.TestCase):
         self.assertEqual(collect.parse_cho(CHO)[0]["published"], "2026-11-11T22:24:00+09:00")
 
     def test_cho_url(self):
-        self.assertEqual(collect.parse_cho(CHO)[0]["url"], "https://bm.best-hit.tv/ventforet/?anc=906571#anc")
+        self.assertEqual(collect.parse_cho(CHO)[0]["url"], "https://bm.best-hit.tv/ventforet/comment.php?log_id=906571")
 
 
 class SelectRaTest(unittest.TestCase):
