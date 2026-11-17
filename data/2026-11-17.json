@@ -1,0 +1,257 @@
+{
+ "date": "2026-11-17",
+ "collected_at": "2026-11-17T12:15:38.467119+09:00",
+ "club": {
+  "record": "3勝3分11敗",
+  "rank": 20,
+  "league": "明治安田Ｊ２リーグ",
+  "next": {
+   "date": "2026-11-21",
+   "round": "第18節",
+   "time": "14:00",
+   "opponent": "ヴァンラーレ八戸",
+   "home": true,
+   "venue": "ＪＩＴ　リサイクルインク　スタジアム"
+  }
+ },
+ "digest": {
+  "closed": false,
+  "links_only": false,
+  "top": {
+   "headline": "13本のシュートも無得点　藤枝戦を数字で振り返る",
+   "body": "ブログ「甲府を考える｜試合とデータ」が、14日にアウェーで行われた明治安田J2第17節、藤枝MYFC戦の試合記録とxGを整理した。13本のシュートを放ちながら無得点に終わった一戦で、記事はこれで3連敗、7試合勝利なしになったと伝えている。\n\n筆者は、前節の仙台戦で5失点した甲府が、今回は前半を無失点で折り返したと整理している。しかし67分、左コーナーキックから長尾優斗がクロスを入れ、真鍋隼虎のヘディングで先制点を許し、そのまま試合終了を迎えた。キックオフは14時3分、会場は藤枝総合運動公園サッカー場で、入場者数は5,055人だった。\n\n記事は今回、結果と公開データの整理にとどめ、詳しい戦術的な考察は別の記事で振り返るとしている。甲府は3勝3分11敗で20位。次戦は21日14時から、ホームで第18節のヴァンラーレ八戸戦に臨む。",
+   "links": [
+    {
+     "title": "【試合結果速報】藤枝1-0甲府｜13本のシュートも無得点。第17節の試合記録とxGを整理",
+     "url": "https://note.com/kofu_match_lab/n/n8b2dafaccb96",
+     "source": "甲府を考える｜試合とデータ"
+    }
+   ],
+   "image": "https://assets.st-note.com/production/uploads/images/336509849/rectangle_large_type_2_bc268640f0ec4cfb5cce3f5eb17b514f.png?width=800"
+  },
+  "second": null,
+  "briefs": [
+   {
+    "headline": "選手会オークションのお知らせ、クラブ公式に",
+    "body": "クラブは16日深夜、公式サイトで「2026/27シーズン 選手会オークション」のお知らせを掲載した。詳細は明らかになっていない。",
+    "links": [
+     {
+      "title": "「２０２６／２７シーズン 選手会オークション」のお知らせ",
+      "url": "https://www.ventforet.jp/news/team/525726",
+      "source": "クラブ公式"
+     }
+    ],
+    "image": null
+   }
+  ],
+  "rumors": [
+   {
+    "headline": "チュクウディに高評価の声、ベンカリファは「フィットに時間」",
+    "body": "練習を見たとする書き込みが超掲示板に出ている。チュクウディは技術が高く、すぐに獲得してよい水準との評価がある一方、サイドからのクロス精度には課題があるとの指摘だ。ベンカリファは体が重そうで、チームになじむまで時間がかかりそうとの見方が出ている。フリーの外国人FW2名が練習に参加していること自体は伝えられているが、クラブからの獲得の発表はなく、詳細は明らかになっていない。",
+    "origin": "超掲示板",
+    "confidence": 2,
+    "links": [
+     {
+      "title": "超掲示板 910020",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=910020#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 910027",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=910027#anc",
+      "source": "超掲示板"
+     }
+    ],
+    "image": null
+   },
+   {
+    "headline": "トップチーム人件費は売上の約22%？　決算から試算する声",
+    "body": "超掲示板に、2026年6月期決算（百年構想リーグを含む変則決算）をもとに、トップチームの人件費は売上の約22%にとどまるとの計算が出た。別の書き込みも人件費の低さに触れ、J3に降格すれば収入が減り、J3中位以下の人件費予算になるとの見方を示している。数字の出どころを問う声もある。クラブからの発表はなく、詳細は明らかになっていない。",
+    "origin": "超掲示板",
+    "confidence": 2,
+    "links": [
+     {
+      "title": "超掲示板 909756",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=909756#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 909754",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=909754#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 909751",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=909751#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 909755",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=909755#anc",
+      "source": "超掲示板"
+     }
+    ],
+    "image": null
+   },
+   {
+    "headline": "佐藤和弘も今季限りで引退か",
+    "body": "超掲示板に、山本英臣に加えて佐藤和弘も今年いっぱいで現役を退くのではないか、との書き込みが出た。山本については12月いっぱいでの引退を見る声がすでにある。クラブからの発表はなく、詳細は明らかになっていない。",
+    "origin": "超掲示板",
+    "confidence": 1,
+    "links": [
+     {
+      "title": "超掲示板 909957",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=909957#anc",
+      "source": "超掲示板"
+     }
+    ],
+    "image": null
+   }
+  ],
+  "boards": [
+   {
+    "headline": "5ch 甲府スレ：話題は「選手のイベント出演」へ　皮肉とあきらめが濃く",
+    "body": "前の号の槙野発言や松本との比較は後ろに退いた。代わって、選手がクラブのイベントに出ることへの賛否が新しい話題になっている。この時期に出るのかという批判がある一方、スポンサーのイベントに参加するだけで文句を言うのはどうか、との反論もある。ゴール裏をめぐる応酬は続き、応援の姿勢が勝てない原因だとする声と、八つ当たりだとする声が割れている。渋谷監督の後任探しや解任の是非、インドネシア企業への期待、出向制度の見直しを求める書き込みも並ぶ。空気は怒りよりも自嘲とあきらめが目立つ。",
+    "board": "5ch 甲府スレ",
+    "links": [
+     {
+      "title": "5ch 甲府スレ 487",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/487",
+      "source": "5ch 甲府スレ"
+     },
+     {
+      "title": "5ch 甲府スレ 490",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/490",
+      "source": "5ch 甲府スレ"
+     },
+     {
+      "title": "5ch 甲府スレ 486",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/486",
+      "source": "5ch 甲府スレ"
+     },
+     {
+      "title": "5ch 甲府スレ 481",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/481",
+      "source": "5ch 甲府スレ"
+     },
+     {
+      "title": "5ch 甲府スレ 483",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/483",
+      "source": "5ch 甲府スレ"
+     }
+    ],
+    "image": null
+   },
+   {
+    "headline": "超掲示板：「八戸戦で終戦」の切迫感に、ボイコット論とJ3の覚悟",
+    "body": "前の号に続き、21日の八戸戦に勝てなければ終戦という見方が強い。新しい動きは、応援のボイコットもありだとする声と、苦しい時こそスタジアムで寄り添うべきだとする声がぶつかっていることだ。J3に落ちても通うのか、今年で小瀬に行くのは最後かといった、降格後を見据えた書き込みも増えた。クラブが動かないまま日が暮れるという苛立ちは強まり、監督交代を含む声明を求める投稿もある。選手会オークションのお知らせや、会員向けのホッケーシャツ配布には、今は響かないという冷めた反応が目立つ。練習で見た外国人FWの評価も話題になっている。",
+    "board": "超掲示板",
+    "links": [
+     {
+      "title": "超掲示板 909907",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=909907#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 909901",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=909901#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 909935",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=909935#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 909886",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=909886#anc",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 909838",
+      "url": "https://bm.best-hit.tv/ventforet/?anc=909838#anc",
+      "source": "超掲示板"
+     }
+    ],
+    "image": null
+   }
+  ],
+  "reads": [
+   {
+    "headline": "「もっと頑張れ」は沼を深くする？　組織学習で読む藤枝戦",
+    "body": "ブログ「ヴァンフォーレ組織論」が、組織学習の「ダブルループ学習」を補助線に、14日の藤枝戦を読んでいる。前提を問い直した監督と、前提のまま詰めた監督の違いが明暗を分けたのではないか、という見立てで、「前半は悪くなかった」と切り出している。",
+    "links": [
+     {
+      "title": "「もっと頑張れ」が、沼を深くする",
+      "url": "https://note.com/happy_fish836/n/n95e4ddc76a1a",
+      "source": "ヴァンフォーレ組織論"
+     }
+    ],
+    "image": "https://assets.st-note.com/production/uploads/images/336176903/rectangle_large_type_2_bf0bdeaea5e82ac0cf89a27f5507392c.png?width=800"
+   }
+  ],
+  "editorial": "シュートを13本打って0点では、締め切り前に原稿を13本書いて1本も載らない編集部の苦しみとよく似ている。掲示板ではオークションにも気持ちが乗らないという声があったが、いま入札したいのは21日の勝ち点3だ。八戸戦では、ぜひ落札させてほしい。"
+ },
+ "news": [
+  {
+   "source": "クラブ公式",
+   "title": "「２０２６／２７シーズン 選手会オークション」のお知らせ",
+   "url": "https://www.ventforet.jp/news/team/525726",
+   "published": "2026-11-16T23:59:00+09:00",
+   "image": null
+  },
+  {
+   "source": "ｄメニューニュース",
+   "title": "ヴァンラーレ八戸　ホームでいわきと対戦",
+   "url": "https://topics.smt.docomo.ne.jp/article/abanet/region/abanet-205892?fm=latestnews",
+   "published": "2026-11-16T18:45:00+09:00",
+   "image": "https://img.topics.smt.news.goo.ne.jp/picture/abanet/m_abanet-205892.jpg"
+  },
+  {
+   "source": "アルビレックス新潟 公式サイト",
+   "title": "【11月29日（日）甲府戦】しっとりあま～い、あったかくておいしい「いもジェンヌ」の石焼きいも販売ブース出店！",
+   "url": "https://www.albirex.co.jp/news/70415/",
+   "published": "2026-11-16T14:02:42+09:00",
+   "image": "https://www.albirex.co.jp/files/image/70415/1/01.jpg"
+  },
+  {
+   "source": "Yahoo!ニュース",
+   "title": "【高校サッカー】個性派ぞろいの山梨学院イレブン 「誰よりも戦う姿を」 12回目の夢舞台へ 生出演で決意語る（YBS山梨放送）",
+   "url": "https://news.yahoo.co.jp/articles/291389cd52dcd8c53286a46d32312297c24da92e?page=3",
+   "published": "2026-11-16T14:01:00+09:00",
+   "image": "https://newsatcl-pctr.c.yimg.jp/t/amd-img/20261116-06766197-ybs-000-2-view.jpg?exp=10800"
+  },
+  {
+   "source": "日テレNEWS NNN",
+   "title": "【高校サッカー】個性派ぞろいの山梨学院イレブン 「誰よりも戦う姿を」 12回目の夢舞台へ 生出演で決意語る",
+   "url": "https://news.ntv.co.jp/n/ybs/category/sports/ys9f5ad80eaa5b4106a6daf77762b906bf?p=3",
+   "published": "2026-11-16T14:01:00+09:00",
+   "image": "https://image.gallery.play.jp/ybs-news/articles/e9dba110f2e641e7ad363a4e6f727d06/f1200877-5e30-4ccb-8d3d-f8e3763ed08f.jpg?w=1200"
+  },
+  {
+   "source": "ニコニコニュース",
+   "title": "槙野智章監督「何度も這い上がり、歯を食いしばり・・・」13試合ぶり勝利を報告！再出発宣言にサポーター熱狂",
+   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE8yTm9iTmtocUZLOW1haDItRWlaVVFiR2hBa0hKMUN1RUxUeGZvS0p1T0JicHpfZEJJeWRBdFYwUUdHdVAzZC1KUll1UF91ZlBPU1JxNHZGUG50MHhOa1dJOXFEWUJEME9n?oc=5",
+   "published": "2026-11-16T13:30:18+09:00",
+   "image": null
+  },
+  {
+   "source": "KFB福島放送",
+   "title": "福島ファイヤーボンズ vs 越谷アルファーズ（11月14日）",
+   "url": "https://www.kfb.co.jp/news/article/17053707",
+   "published": "2026-11-16T13:29:00+09:00",
+   "image": "https://p.potaufeu.asahi.com/a848-p/picture/31569955/d95c76e98073d33602f51fcb0e34b83b.jpg"
+  },
+  {
+   "source": "Unisba Media",
+   "title": "【魔境J2】第11節土曜消化時点の順位がこちら！サポーター反応 #サッカー #磐田 #大宮 #いわき #徳島 #札幌 #鳥栖 #甲府 #大分 #湘南 #jリーグ#新潟 #仙台 #大分 #藤枝 #富山 Kara Young (OraNg3Sj1p)",
+   "url": "https://media.unisba.ac.id/5b47ba0d/bc0b3675HgQFHzR9JVwaJ1o/?share=telegram&nb=1",
+   "published": "2026-11-16T10:44:36+09:00",
+   "image": null
+  }
+ ],
+ "videos": [],
+ "failures": [
+  "k1968k.blog106.fc2.com"
+ ]
+}
