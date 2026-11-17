@@ -1,0 +1,310 @@
+{
+ "date": "2026-11-18",
+ "collected_at": "2026-11-18T06:01:06.331773+09:00",
+ "club": {
+  "record": "3勝3分11敗",
+  "rank": 20,
+  "league": "明治安田Ｊ２リーグ",
+  "next": {
+   "date": "2026-11-21",
+   "round": "第18節",
+   "time": "14:00",
+   "opponent": "ヴァンラーレ八戸",
+   "home": true,
+   "venue": "ＪＩＴ　リサイクルインク　スタジアム"
+  }
+ },
+ "digest": {
+  "closed": false,
+  "links_only": false,
+  "top": {
+   "headline": "仲間を連れて小瀬へ ハーフシート紹介者キャンペーン",
+   "body": "クラブは17日深夜、公式サイトで「2026/27ハーフシーズンシート『紹介者キャンペーン』実施のお知らせ」を掲載した。具体的な特典や条件など詳細は、クラブの公式案内で確認してほしい。\n甲府は3勝3分11敗で20位に沈んでいる。次戦は21日14時から、ホームで第18節のヴァンラーレ八戸戦に臨む。苦しい戦いが続くなか、小瀬のスタンドに仲間の輪を広げようという呼びかけだ。",
+   "links": [
+    {
+     "title": "２０２６／２７ハーフシーズンシート「紹介者キャンペーン」実施のお知らせ",
+     "url": "https://www.ventforet.jp/news/other/525728",
+     "source": "クラブ公式"
+    }
+   ],
+   "image": "https://cdn.www.ventforet.jp/uploads/1b7254361487f66776a555b5ed862505028e1ae6/original.jpg"
+  },
+  "second": null,
+  "briefs": [],
+  "rumors": [
+   {
+    "headline": "外国人FW2人の素性めぐる声 チュクウディは24歳で元U-23ナイジェリア代表",
+    "body": "超掲示板に、練習参加が伝えられている外国人FW2人についての書き込みが続いた。チュクウディは24歳で、ベルギーのヘントに在籍し、U-23ナイジェリア代表の経歴があるという。前所属クラブが経営面のトラブルを抱えていたとの書き込みもある。ベンカリファは34歳でブランクがあり、動きが重そうだとの声が出ている。両選手とも1週間以上練習に参加していることから、獲得に動くのではとの見方がある一方、補強の形だけで実際の獲得はないとの見方もある。クラブからの発表はなく、獲得の詳細は明らかになっていない。",
+    "origin": "超掲示板の複数の書き込み",
+    "confidence": 2,
+    "links": [
+     {
+      "title": "超掲示板 910138",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=910138",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 910046",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=910046",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 910075",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=910075",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 910134",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=910134",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 910098",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=910098",
+      "source": "超掲示板"
+     }
+    ],
+    "image": null
+   },
+   {
+    "headline": "練習見学の声 復帰組はランニング、米陀や荒木らは好調そう",
+    "body": "超掲示板に、練習を見たとする書き込みが相次いだ。福井啓太、安田虎士朗、末木裕也、小林岩魚は別メニューでランニングをしていたという。河田晃兵、三平和司、井上樹は練習にいなかったとの書き込みがあるが、井上はハーフメニューだったとの書き込みもあり食い違っている。保坂知希、米陀大洋、荒木翔、水野颯太、スタチオーリミケーレ、熊倉弘達は調子が良さそうだとの声もある。クラブからの発表はなく、詳細は明らかになっていない。",
+    "origin": "超掲示板の複数の書き込み(練習見学者)",
+    "confidence": 2,
+    "links": [
+     {
+      "title": "超掲示板 910125",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=910125",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 910195",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=910195",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 910198",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=910198",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 910126",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=910126",
+      "source": "超掲示板"
+     }
+    ],
+    "image": null
+   },
+   {
+    "headline": "練習に見慣れない大型CB 川井か、別の選手か",
+    "body": "超掲示板に、練習で見慣れない大型のセンターバックがいたとの書き込みが複数出た。身長は185〜190cmほどで、パス回しや練習後のロングフィードに加わっていたという。アカデミー在籍の川井謙真ではないかとの見方がある一方、川井や一瀬大寿ではなさそうだとの書き込みもある。大学生ではとの声や、大学の選手かと思ったが違ったとの書き込みもあり、正体は分かっていない。クラブからの発表はなく、詳細は明らかになっていない。",
+    "origin": "超掲示板の複数の書き込み(練習見学者)",
+    "confidence": 2,
+    "links": [
+     {
+      "title": "超掲示板 910196",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=910196",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 910071",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=910071",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 910069",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=910069",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 910070",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=910070",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 910064",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=910064",
+      "source": "超掲示板"
+     }
+    ],
+    "image": null
+   },
+   {
+    "headline": "監督交代の気配なしとの観測 練習は渋谷監督が指揮",
+    "body": "超掲示板に、練習を見た人から「監督交代の気配は全く無い」との書き込みが出た。練習の雰囲気はぬるいとの印象も添えられている。今日の練習も渋谷監督が指揮を執っているとの書き込みや、監督交代も補強の音沙汰もないとの書き込みが続いている。八戸戦に勝てなければ続投は難しいとの見方もあるが、観測の域を出ない。クラブからの発表はなく、詳細は明らかになっていない。",
+    "origin": "超掲示板の複数の書き込み",
+    "confidence": 2,
+    "links": [
+     {
+      "title": "超掲示板 910071",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=910071",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 910053",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=910053",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 910187",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=910187",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 910096",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=910096",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 910083",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=910083",
+      "source": "超掲示板"
+     }
+    ],
+    "image": null
+   },
+   {
+    "headline": "来季の新卒補強、内定3人か 返事待ちの有望株も",
+    "body": "超掲示板に、来季の新卒獲得をめぐる書き込みが相次いだ。すでに3人の内定が出ており、ほかに返事待ちの選手もいるのではとの見方がある。ユース出身の小林隆は、甲府に来ないなら上のカテゴリーではないかとの声も出た。別の書き込みには、アカデミー出身の選手がJ3熊本に内定したというものもある。ユース出身者の帰還がないことを寂しがる声が目立つ。クラブからの発表はなく、詳細は明らかになっていない。",
+    "origin": "超掲示板の複数の書き込み",
+    "confidence": 2,
+    "links": [
+     {
+      "title": "超掲示板 910093",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=910093",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 910100",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=910100",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 910115",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=910115",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 910054",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=910054",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 910077",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=910077",
+      "source": "超掲示板"
+     }
+    ],
+    "image": null
+   }
+  ],
+  "boards": [
+   {
+    "headline": "5ch 甲府スレ:話題は「勝ちたい気持ち」とスポンサー探しへ、重い空気は変わらず",
+    "body": "前の号の選手のイベント出演への賛否やインドネシア頼みの声から、話題が移った。日本代表の試合を見て、「負けられない」という意識が選手の重圧になり、勝ちたい気持ちが見えなくなっているのではとの指摘が出た。経営面では、地元企業だけで大口スポンサーを賄えないなら、全国企業が投資したくなる価値をどう作るのかとの書き込みが目立つ。かつての「コスパ」という強みを手放したことを嘆く長文や、「金がない」と短く書き込む声もある。降格の危機でシーズン途中に監督交代も補強もしなかった例があるのかという問いかけも出た。練習を見た人からは、危機感を持っていそうな選手がいる一方、全体は淡々としていたとの報告があり、選手への批判が誹謗中傷にあたるかをめぐる応酬も続いた。空気は怒りよりも、疲れとあきらめが濃い。",
+    "board": "5ch 甲府スレ",
+    "links": [
+     {
+      "title": "5ch 甲府スレ 513",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/513",
+      "source": "5ch 甲府スレ"
+     },
+     {
+      "title": "5ch 甲府スレ 512",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/512",
+      "source": "5ch 甲府スレ"
+     },
+     {
+      "title": "5ch 甲府スレ 498",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/498",
+      "source": "5ch 甲府スレ"
+     },
+     {
+      "title": "5ch 甲府スレ 508",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/508",
+      "source": "5ch 甲府スレ"
+     },
+     {
+      "title": "5ch 甲府スレ 497",
+      "url": "https://kizuna.5ch.io/test/read.cgi/soccer/1793848769/497",
+      "source": "5ch 甲府スレ"
+     }
+    ],
+    "image": null
+   },
+   {
+    "headline": "超掲示板:八戸戦へ「バス待ち」と大合唱案、監督続投への不満は根強く",
+    "body": "前の号の外国人FWとボイコット論に代わり、話題は21日の八戸戦に向けた後押しの方法に移った。選手バスを迎える「バス待ち」の呼びかけが出る一方、過去の敗戦を持ち出してジンクスを気にする声もある。90分間「夢叶う小瀬」を大合唱する案が出て、賛成が多い。ただ、90分歌って跳ね続けるのはきついとの声もあり、手拍子でもよい、各自のやり方で応援すればよいという意見でまとまりつつある。「選手の笑顔が見たい」という書き込みが目立つ。方言での投稿の是非をめぐるやり取りも続いた。一方で、渋谷監督の続投への不満は変わらず、八戸戦に勝てなければ続投は難しいとの見方もある。ベンカリファの年齢やコンディションをめぐる賛否も続いている。期待は薄いが、スタジアムに行くという熱は残っている。",
+    "board": "超掲示板",
+    "links": [
+     {
+      "title": "超掲示板 910229",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=910229",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 910233",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=910233",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 910143",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=910143",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 910183",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=910183",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 910139",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=910139",
+      "source": "超掲示板"
+     }
+    ],
+    "image": null
+   }
+  ],
+  "reads": [
+   {
+    "headline": "藤枝のサポーター拡大に動く大学生、藤枝対甲府を連載で取り上げる",
+    "body": "藤枝MYFCのサポーター拡大に動く大学生が、連載17回目として「藤枝MYFC × ヴァンフォーレ甲府」を取り上げた。冒頭は自己紹介から始まっており、藤枝側の視点で14日の一戦に触れている。",
+    "links": [
+     {
+      "title": "#17 藤枝MYFC ✖︎ ヴァンフォーレ甲府",
+      "url": "https://note.com/fujieda_project/n/n5960cb87d6da",
+      "source": "藤枝MYFCサポーター拡大に動く大学生"
+     }
+    ],
+    "image": "https://assets.st-note.com/production/uploads/images/337088770/rectangle_large_type_2_9298609c868c7817ee23056797747ddb.png?width=800"
+   }
+  ],
+  "editorial": "一面は「仲間を紹介しよう」だが、20位のチームを誰かに勧めるのは勇気がいる、と編集部は一瞬ひるんだ。それでも掲示板には、八戸戦に向けてバス待ちや大合唱を呼びかける声が並んでいる。紹介する前に、まず自分が21日に小瀬へ行くのが筋だろう。"
+ },
+ "news": [
+  {
+   "source": "クラブ公式",
+   "title": "２０２６／２７ハーフシーズンシート「紹介者キャンペーン」実施のお知らせ",
+   "url": "https://www.ventforet.jp/news/other/525728",
+   "published": "2026-11-17T23:59:00+09:00",
+   "image": "https://cdn.www.ventforet.jp/uploads/1b7254361487f66776a555b5ed862505028e1ae6/original.jpg"
+  },
+  {
+   "source": "フットボールチャンネル",
+   "title": "鹿島アントラーズ｜順位・順位推移・試合日程・結果【2026/27】",
+   "url": "https://www.footballchannel.jp/2026/11/17/post991935/",
+   "published": "2026-11-17T18:31:00+09:00",
+   "image": "https://www.footballchannel.jp/wordpress/assets/2025/11/20251126_kashima.jpg"
+  },
+  {
+   "source": "日刊スポーツ",
+   "title": "【藤枝】槙野智章監督「さぁ、ここから再出発です！」13試合ぶり勝利にサポーターも大興奮",
+   "url": "https://www.nikkansports.com/m/soccer/news/amp/202611170000999.html",
+   "published": "2026-11-17T16:17:27+09:00",
+   "image": "https://www.nikkansports.com/soccer/news/img/202611170000999-w1300_0.jpg"
+  }
+ ],
+ "videos": [],
+ "failures": []
+}
