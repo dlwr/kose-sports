@@ -1,0 +1,395 @@
+{
+ "date": "2026-11-27",
+ "collected_at": "2026-11-27T06:01:06.015161+09:00",
+ "club": {
+  "record": "3勝3分13敗",
+  "rank": 20,
+  "league": "明治安田Ｊ２リーグ",
+  "next": {
+   "date": "2026-11-29",
+   "round": "第20節",
+   "time": "14:00",
+   "opponent": "アルビレックス新潟",
+   "home": false,
+   "venue": "デンカビッグスワンスタジアム"
+  }
+ },
+ "digest": {
+  "closed": false,
+  "links_only": false,
+  "top": {
+   "headline": "サンペイが練習場に帰還　足りなかった「エンタメ」が戻る",
+   "body": "タグマ！の無料記事「練習場から」が26日夜、三平和司（サンペイ）が練習場に復帰したと伝えた。記事は「ヴァンフォーレ甲府に足りなかったピッチ内外のエンターテインメント性」と題し、サンペイさんの帰還を取り上げている。\n同じ「練習場から」では、山梨フットボールが内田体制になって最初の練習公開をリポートした。「心機一転、内田一夫監督の元でリスタート」と題している。\n甲府は3勝3分13敗の20位。次は29日14時、第20節のアウェイ新潟戦となる。三平の状態や新潟戦での起用について、クラブからの発表はなく、詳細は明らかになっていない。",
+   "links": [
+    {
+     "title": "無料記事「ヴァンフォーレ甲府に足りなかったピッチ内外のエンターテインメント性。サンペイさんが練習場に復帰」【練習場から】",
+     "url": "https://www3.targma.jp/yamanashi/2026/11/26/post31450/",
+     "source": "タグマ！"
+    },
+    {
+     "title": "「内田体制最初の練習公開、心機一転、内田一夫監督の元でリスタート」【練習場から】 : 山梨フットボール",
+     "url": "https://www3.targma.jp/yamanashi/2026/11/26/post31437/",
+     "source": "タグマ！"
+    }
+   ],
+   "image": "https://www3.targma.jp/yamanashi/wp-content/uploads/sites/8/2026/11/5T4A1910.jpg"
+  },
+  "second": null,
+  "briefs": [
+   {
+    "headline": "勝ち点12の最下位、残留圏へ必要な勝ち点は",
+    "body": "日テレNNNなどが26日、リーグ前半を終えて勝ち点わずか12の最下位に沈む甲府が、残留圏に届くために必要な勝ち点を取り上げた。",
+    "links": [
+     {
+      "title": "【J2甲府】リーグ前半を終え勝ち点わずか12 最下位から残留圏到達へ 必要な勝ち点は 山梨",
+      "url": "https://news.ntv.co.jp/n/ybs/category/sports/ys09ea14b407384802a8a19f43ed56b051",
+      "source": "日テレNEWS NNN"
+     },
+     {
+      "title": "【J2甲府】リーグ前半を終え勝ち点わずか12 最下位から残留圏到達へ 必要な勝ち点は 山梨",
+      "url": "https://article.auone.jp/339666d4-a9cc-4f5f-8d68-c935a6ffd173",
+      "source": "au Webポータル"
+     }
+    ],
+    "image": "https://image.gallery.play.jp/ybs-news/articles/7a76c596fcd748f7a56098bab6a7c882/d801c8de-9e4b-4b66-8640-e222e6cdd5e7.jpg?w=1200"
+   },
+   {
+    "headline": "新潟首位で折り返し　J2は上位も下位も大混戦",
+    "body": "J2は第19節を終えて前半戦が終了。新潟が首位で折り返し、1〜8位は勝ち点差6の混戦となった。2〜8位は勝ち点3差で、降格圏の水位が上がっているとの声も出ている。甲府は3勝3分13敗の20位。",
+    "links": [
+     {
+      "title": "【J2順位表】新潟が首位で前半戦折り返し 2位以下は大きく順位変動 1～8位まで勝ち点差『6』の混戦〈第19節〉",
+      "url": "https://news.yahoo.co.jp/articles/4a40fe2f09afbb6c8e104f0753e5ebf0075b1c8f",
+      "source": "Yahoo!ニュース"
+     },
+     {
+      "title": "混戦のJ最新順位表に驚愕「激ヤバリーグ」 2～8位が勝ち点3差…残留争いも熾烈「降格圏の水位上がってる」",
+      "url": "https://news.infoseek.co.jp/article/footballzone_687229/",
+      "source": "Infoseek"
+     },
+     {
+      "title": "J2｜順位・日程・結果・個人成績【2026/27】",
+      "url": "https://www.footballchannel.jp/2026/11/26/post1056728/",
+      "source": "フットボールチャンネル"
+     }
+    ],
+    "image": "https://newsatcl-pctr.c.yimg.jp/t/amd-img/20261126-09878541-nnn-000-2-view.jpg?exp=10800"
+   },
+   {
+    "headline": "新潟、29日は催し盛りだくさん　甲府戦でイベント続々",
+    "body": "アルビレックス新潟は公式サイトで、29日の甲府戦に合わせたイベントを相次いで発表した。「推しト～ク」には清水伸さんが出演し、カナールステージ「ミヨッテ」のスケジュールも公開。新潟市との包括連携協定締結記念イベントや、公式YouTube「アルサポQ」の収録も予定されている。",
+    "links": [
+     {
+      "title": "【11月29日（日）甲府戦】私も推しています！アルビ「推しト～ク」に清水伸さん出演！カナールステージ「ミヨッテ」イベントスケジュール！",
+      "url": "https://www.albirex.co.jp/news/70468/",
+      "source": "アルビレックス新潟 公式サイト"
+     },
+     {
+      "title": "【11月29日（日）甲府戦】新潟市との包括連携協定締結記念イベント実施のお知らせ",
+      "url": "https://www.albirex.co.jp/news/70467/",
+      "source": "アルビレックス新潟 公式サイト"
+     },
+     {
+      "title": "【11月29日（日）甲府戦】クラブ公式YouTubeチャンネル オリジナルコンテンツ「アルサポQ」収録のお知らせ",
+      "url": "https://www.albirex.co.jp/news/70462/",
+      "source": "アルビレックス新潟 公式サイト"
+     }
+    ],
+    "image": "https://www.albirex.co.jp/files/image/70468/1/01 (1).jpg"
+   },
+   {
+    "headline": "俺たちは誰にも止められない　最後まで貫いたサポーターの気持ち",
+    "body": "サッカーダイジェストWebが26日、最後まで気持ちを貫いた甲府サポーターの画像を掲載した。見出しは「俺たちは誰にも止められない！」。",
+    "links": [
+     {
+      "title": "【画像】俺たちは誰にも止められない！最後まで気持ちを貫いたヴァンフォーレ甲府サポーター",
+      "url": "https://www.soccerdigestweb.com/topics_detail9/id=200125",
+      "source": "サッカーダイジェストWeb"
+     }
+    ],
+    "image": "https://www.soccerdigestweb.com/files/topics/200125_ext_01_0.jpg"
+   },
+   {
+    "headline": "甲府U-12、全日本U-12大会の組み合わせ決定",
+    "body": "ヴァンフォーレ甲府U-12が出場するJFA第50回全日本U-12サッカー選手権大会の1次ラウンド組み合わせが決まった。クラブ公式サイトが26日に知らせた。対戦カードや日程などの詳細は明らかになっていない。",
+    "links": [
+     {
+      "title": "[ヴァンフォーレ甲府U-12]JFA第50回 全日本U-12サッカー選手権大会 1次ラウンド組み合わせ決定のお知らせ",
+      "url": "https://www.ventforet.jp/news/other/525745",
+      "source": "クラブ公式"
+     }
+    ],
+    "image": "https://cdn.www.ventforet.jp/uploads/52d1a2119aeb8d7d66abf51a253d07d4eb4af3d5/top_flash_large.jpg?1447051599"
+   }
+  ],
+  "rumors": [
+   {
+    "headline": "新潟戦は湘南戦ベースの守備重視か　5バック継続との予想",
+    "body": "超掲示板に、新潟戦は湘南戦と同様に5-4-1と5-3-2を併用し、まず失点を抑えることを優先するとの予想が複数出ている。準備期間が短いため、攻撃面の改善は約2か月のウインターブレイクで本格的に進めるとの見立てが目立つ。クラブからの発表はなく、詳細は明らかになっていない。",
+    "origin": "超掲示板",
+    "confidence": 2,
+    "links": [
+     {
+      "title": "超掲示板 918395",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=918395",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 918383",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=918383",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 918378",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=918378",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 918389",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=918389",
+      "source": "超掲示板"
+     }
+    ],
+    "image": null
+   },
+   {
+    "headline": "今季の人件費は前年から1割ほど減か　書き込みで試算",
+    "body": "超掲示板に、今季の甲府の人件費は昨季から1割ほど減っているとの書き込みがある。過去の額として24年が4億7600万円、25年が5億円とする投稿もある。外国人への支出を考えれば1割減は信じがたいとの声や、実際は1割に届かない減少だとの見方も出ている。クラブからの発表はなく、詳細は明らかになっていない。",
+    "origin": "超掲示板",
+    "confidence": 2,
+    "links": [
+     {
+      "title": "超掲示板 918442",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=918442",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 918430",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=918430",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 918422",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=918422",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 918420",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=918420",
+      "source": "超掲示板"
+     }
+    ],
+    "image": null
+   },
+   {
+    "headline": "前澤、松山らの合流は年明けか　豊田だけ早まる可能性も",
+    "body": "超掲示板に、前澤と松山はインカレがあるため、内定選手の合流は年明けになるのではとの書き込みが出ている。豊田だけは早めに合流するかもしれないとの見方もある。クラブからの発表はなく、詳細は明らかになっていない。",
+    "origin": "超掲示板",
+    "confidence": 2,
+    "links": [
+     {
+      "title": "超掲示板 918432",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=918432",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 918444",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=918444",
+      "source": "超掲示板"
+     }
+    ],
+    "image": null
+   },
+   {
+    "headline": "大寿、佐藤恵介はウインターブレイク明けに戦列復帰か",
+    "body": "超掲示板に、順調に進めば一瀬大寿と佐藤恵介はウインターブレイク明けには出場できそうだとの書き込みがある。大寿が写るインスタグラムの写真から、復帰が近いのではとの声も出ている。クラブからの発表はなく、詳細は明らかになっていない。",
+    "origin": "超掲示板",
+    "confidence": 2,
+    "links": [
+     {
+      "title": "超掲示板 918586",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=918586",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 918503",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=918503",
+      "source": "超掲示板"
+     }
+    ],
+    "image": null
+   },
+   {
+    "headline": "MLS満了の富樫がフリーとの書き込み　内藤大和との2トップ望む声",
+    "body": "超掲示板に、MLSとの契約を満了した富樫がフリーになっているとして、甲府での獲得と内藤大和との2トップ起用を望む書き込みが出た。単発の投稿で、クラブからの発表はなく、獲得の詳細は明らかになっていない。",
+    "origin": "超掲示板",
+    "confidence": 1,
+    "links": [
+     {
+      "title": "超掲示板 918571",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=918571",
+      "source": "超掲示板"
+     }
+    ],
+    "image": null
+   }
+  ],
+  "boards": [
+   {
+    "headline": "超掲示板：初陣の評価論争から、新潟戦へ向けた「皮算用」へ",
+    "body": "前の号で「光」と「結果は残酷」に割れた初陣の評価は、新潟戦を前に、現実的な目標をめぐる議論へ移った。年内3試合で「1勝1分1敗」や「勝ち点3〜4」を目指す声、残留ラインを勝ち点40とみて逆算する試算、降格の確率を数える投稿が並ぶ。首位との差を資金力で説明する書き込みもある。\n新しく増えたのは、三平の練習復帰を歓迎する声だ。沈んだ空気を変えられる選手として期待が集まる一方、今季は緊張感を持ってほしいとの意見もある。新潟戦の現地参戦を表明する投稿が複数出て、ゴール裏の位置を尋ねる書き込みもあった。\nベテランの起用法や湘南戦の戦い方、ワントップをめぐる議論は続き、降格を覚悟するとの嘆きも消えない。全体としては、不安を抱えたまま、首位新潟とのアウェイ戦をまず見届けようという空気だ。",
+    "board": "超掲示板",
+    "links": [
+     {
+      "title": "超掲示板 918582",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=918582",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 918489",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=918489",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 918521",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=918521",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 918425",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=918425",
+      "source": "超掲示板"
+     },
+     {
+      "title": "超掲示板 918395",
+      "url": "https://bm.best-hit.tv/ventforet/comment.php?log_id=918395",
+      "source": "超掲示板"
+     }
+    ],
+    "image": null
+   }
+  ],
+  "reads": [
+   {
+    "headline": "新潟戦の前に読む、数字とジンクスの予習帳",
+    "body": "F&F@Jリーグ分析が、新潟×甲府の試合前データをまとめている。過去の対戦成績や得点・失点の傾向、ホーム・アウェイ別成績、スコア分布のほか、両クラブのジンクスも紹介し、観戦前の参考資料と位置づけている。",
+    "links": [
+     {
+      "title": "2026-27 J2第20節【アルビレックス新潟×ヴァンフォーレ甲府】試合前データ＆ジンクス #180",
+      "url": "https://note.com/fumigo238/n/nd5fadd73762b",
+      "source": "F&F@Jリーグ分析"
+     }
+    ],
+    "image": "https://assets.st-note.com/production/uploads/images/341129048/rectangle_large_type_2_d0c17abf9dd92edd202b5f65677beef2.png?width=800"
+   },
+   {
+    "headline": "新監督・内田一夫は何者か、名物スカウトの言葉から探る",
+    "body": "「甲府を考える｜試合とデータ」が、2010年の昇格監督・内田一夫氏について、スカウトの森淳氏が語った「同じ絵を描ける指導者」という関係に注目している。昇格という実績以上に興味深い話として、人物像を掘り下げている。",
+    "links": [
+     {
+      "title": "【甲府考察】内田一夫は何者か。森淳が語った「同じ絵を描ける指導者」の素顔。",
+      "url": "https://note.com/kofu_match_lab/n/n85fea4fe579b",
+      "source": "甲府を考える｜試合とデータ"
+     }
+    ],
+    "image": "https://d2l930y2yx77uc.cloudfront.net/production/social_images/cb481703e145d6bb99fceb123613cbfa156e8a2f.png"
+   }
+  ],
+  "editorial": "三平が練習場に戻り、掲示板では年内3試合の勝ち点を数える声が絶えない。編集部も指折り数えているが、20位の身では皮算用すら緊張する。まずは首位新潟とのアウェイ戦、勝ち点が積み上がる瞬間をこの目で見たい。"
+ },
+ "news": [
+  {
+   "source": "クラブ公式",
+   "title": "[ヴァンフォーレ甲府U-12]JFA第50回 全日本U-12サッカー選手権大会 1次ラウンド組み合わせ決定のお知らせ",
+   "url": "https://www.ventforet.jp/news/other/525745",
+   "published": "2026-11-26T23:59:00+09:00",
+   "image": "https://cdn.www.ventforet.jp/uploads/52d1a2119aeb8d7d66abf51a253d07d4eb4af3d5/top_flash_large.jpg?1447051599"
+  },
+  {
+   "source": "タグマ！",
+   "title": "無料記事「ヴァンフォーレ甲府に足りなかったピッチ内外のエンターテインメント性。サンペイさんが練習場に復帰」【練習場から】",
+   "url": "https://www3.targma.jp/yamanashi/2026/11/26/post31450/",
+   "published": "2026-11-26T23:39:47+09:00",
+   "image": "https://www3.targma.jp/yamanashi/wp-content/uploads/sites/8/2026/11/5T4A1910.jpg"
+  },
+  {
+   "source": "タグマ！",
+   "title": "「内田体制最初の練習公開、心機一転、内田一夫監督の元でリスタート」【練習場から】 : 山梨フットボール",
+   "url": "https://www3.targma.jp/yamanashi/2026/11/26/post31437/",
+   "published": "2026-11-26T23:09:57+09:00",
+   "image": "https://www3.targma.jp/yamanashi/wp-content/uploads/sites/8/2026/11/5T4A1607.jpg"
+  },
+  {
+   "source": "au Webポータル",
+   "title": "【J2甲府】リーグ前半を終え勝ち点わずか12 最下位から残留圏到達へ 必要な勝ち点は 山梨",
+   "url": "https://article.auone.jp/339666d4-a9cc-4f5f-8d68-c935a6ffd173",
+   "published": "2026-11-26T20:36:35+09:00",
+   "image": "https://portal.auone.jp/media/thumbnails/2026/11/26/https___news_jp_i_1498649126734332282_w1280.webp"
+  },
+  {
+   "source": "日テレNEWS NNN",
+   "title": "【J2甲府】リーグ前半を終え勝ち点わずか12 最下位から残留圏到達へ 必要な勝ち点は 山梨",
+   "url": "https://news.ntv.co.jp/n/ybs/category/sports/ys09ea14b407384802a8a19f43ed56b051",
+   "published": "2026-11-26T20:35:00+09:00",
+   "image": "https://image.gallery.play.jp/ybs-news/articles/7a76c596fcd748f7a56098bab6a7c882/d801c8de-9e4b-4b66-8640-e222e6cdd5e7.jpg?w=1200"
+  },
+  {
+   "source": "アルビレックス新潟 公式サイト",
+   "title": "【11月29日（日）甲府戦】私も推しています！アルビ「推しト～ク」に清水伸さん出演！カナールステージ「ミヨッテ」イベントスケジュール！",
+   "url": "https://www.albirex.co.jp/news/70468/",
+   "published": "2026-11-26T17:01:48+09:00",
+   "image": "https://www.albirex.co.jp/files/image/70468/1/01 (1).jpg"
+  },
+  {
+   "source": "アルビレックス新潟 公式サイト",
+   "title": "【11月29日（日）甲府戦】新潟市との包括連携協定締結記念イベント実施のお知らせ",
+   "url": "https://www.albirex.co.jp/news/70467/",
+   "published": "2026-11-26T13:01:32+09:00",
+   "image": "https://www.albirex.co.jp/files/image/70467/1/03.jpg"
+  },
+  {
+   "source": "アルビレックス新潟 公式サイト",
+   "title": "【11月29日（日）甲府戦】クラブ公式YouTubeチャンネル オリジナルコンテンツ「アルサポQ」収録のお知らせ",
+   "url": "https://www.albirex.co.jp/news/70462/",
+   "published": "2026-11-26T12:01:29+09:00",
+   "image": "https://www.albirex.co.jp/files/image/70462/1/シマブク・新井.jpg"
+  },
+  {
+   "source": "サッカーダイジェストWeb",
+   "title": "【画像】俺たちは誰にも止められない！最後まで気持ちを貫いたヴァンフォーレ甲府サポーター",
+   "url": "https://www.soccerdigestweb.com/topics_detail9/id=200125",
+   "published": "2026-11-26T11:56:11+09:00",
+   "image": "https://www.soccerdigestweb.com/files/topics/200125_ext_01_0.jpg"
+  },
+  {
+   "source": "Infoseek",
+   "title": "混戦のJ最新順位表に驚愕「激ヤバリーグ」 2～8位が勝ち点3差…残留争いも熾烈「降格圏の水位上がってる」",
+   "url": "https://news.infoseek.co.jp/article/footballzone_687229/",
+   "published": "2026-11-26T11:20:00+09:00",
+   "image": "https://media.image.infoseek.co.jp/isnews/photos/footballzone/footballzone_687229_0-enlarge.jpg"
+  },
+  {
+   "source": "フットボールチャンネル",
+   "title": "J2｜順位・日程・結果・個人成績【2026/27】",
+   "url": "https://www.footballchannel.jp/2026/11/26/post1056728/",
+   "published": "2026-11-26T09:40:00+09:00",
+   "image": "https://www.footballchannel.jp/wordpress/assets/2026/07/eb0f989a1f29f09619119714e6d54b33.jpg"
+  },
+  {
+   "source": "タグマ！",
+   "title": "【湘南vs甲府】選手コメント : 縦に紡ぎし湘南の",
+   "url": "https://www3.targma.jp/shonan/2026/11/26/post12240/",
+   "published": "2026-11-26T07:40:00+09:00",
+   "image": null
+  },
+  {
+   "source": "Yahoo!ニュース",
+   "title": "【J2順位表】新潟が首位で前半戦折り返し 2位以下は大きく順位変動 1～8位まで勝ち点差『6』の混戦〈第19節〉",
+   "url": "https://news.yahoo.co.jp/articles/4a40fe2f09afbb6c8e104f0753e5ebf0075b1c8f",
+   "published": "2026-11-26T06:11:00+09:00",
+   "image": "https://newsatcl-pctr.c.yimg.jp/t/amd-img/20261126-09878541-nnn-000-2-view.jpg?exp=10800"
+  }
+ ],
+ "videos": [],
+ "failures": []
+}
